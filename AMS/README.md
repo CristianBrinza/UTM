@@ -59,6 +59,11 @@ In afara de acestea 7, mai execta .............. , </br> </br>
 <b>Tipuri de componente:</b>
 aplicatii, tabele, fisiere, pagini veb, documente, siruri, procese (clase active),biblioteci
 
+</br></br></br>
+
+<h4 align="center">For next lecture:</h4>
+Entitati de comportament :
+elementele dinamice ale limbajului Mel, de regula reprezinta verbele limbajului, care descriu comportamentului in timp si spatiu
 
 
 <b></b>
