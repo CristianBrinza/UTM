@@ -111,6 +111,10 @@ reprezinta elementul explicativ al modelului UML, de regula sunt comentarii, exp
 !!!
 </p> </br>
 
+&nbsp;&nbsp; <b>Asocierea</b> - are caz particular / forma speciala -> "Agregare", acesta la randul sau are o forma speciala -> "Compozitia" ; 
+Agregarea - reprezinta relatia dintre partea intraga si partea componenta (la distrugerea partii intregi nu distruge si partea componenta);</br></br>
+&nbsp;&nbsp; <b>Compozitia</b> - relatia dintre partea intreaga si partea componenta, insa cu o forma mai specifica, de parca partea componenta este in interiorul partii intregi; ( partea componenta nu poate exista fara partea intreaga, cu alte cuvinte la distrugerea partii intregi se distruge si partea componenta) </br>
+
 - <b style="color:#0066ff">Generalizarea </b> -
 
 - <b style="color:#0066ff">Realizarea </b> -
