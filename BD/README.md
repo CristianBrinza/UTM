@@ -119,17 +119,17 @@ No</p>
 
 - Try it yourself in DB and answer: what will happen if you will wrongly specify less number of chars than required by date mask?
 
-For example:
-convert(char(8), SomeDateField, 103)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example:</br>
+      convert(char(8), SomeDateField, 103)
 
-When 103 date style requires 10 symbols?
-*
-2008-06-01 00:00:00.000 --- > 01/06/08
-2008-06-01 00:00:00.000 --- > 01/06/20
-Try it yourself in DB and answer: what will happen if you will specify more number of chars than required by date mask?
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When 103 date style requires 10 symbols?
+<p align="center" style="color:#0066ff">2008-06-01 00:00:00.000 --- > 01/06/20</p>
 
-For example:
-convert(char(10), SomeDateField, 3)
+
+- Try it yourself in DB and answer: what will happen if you will specify more number of chars than required by date mask?
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example:
+      convert(char(10), SomeDateField, 3)
 
 When 3 date style requires 8 symbols?
 *

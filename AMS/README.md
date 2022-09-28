@@ -39,7 +39,7 @@ Entitatile ULM:
 
 <b>Entitati</b> - elementele obiect orientate ale limbajului ULM
 
-<b>De structura</b> - substantivele ale limbajului ULM. De regula ele reprezinta partile statice ale modelului care crespund elementelor
+- <b style="color:#0066ff">Entitati de structura</b> - substantivele ale limbajului ULM. De regula ele reprezinta partile statice ale modelului care crespund elementelor
   fizice si conceptuale ale sistemului. 
 
 Entitati de structura:
@@ -61,10 +61,60 @@ aplicatii, tabele, fisiere, pagini veb, documente, siruri, procese (clase active
 
 </br></br></br>
 
-<h4 align="center">For next lecture:</h4>
+<h4 align="center"><b>For next lecture:</b></h4>
 Entitati de comportament :
-elementele dinamice ale limbajului Mel, de regula reprezinta verbele limbajului, care descriu comportamentului in timp si spatiu
+elementele dinamice ale limbajului UML, de regula reprezinta verbele limbajului, care descriu comportamentului in timp si spatiu
+</br></br>
+<hr> </br>
+<p align=right>  
+c.AMS | FCIM UTM Spring 2022 | 104 | 28.09.2021
+</p></br>
+
+- <b style="color:#0066ff">Entitati de comportament :</b>
+
+<b>Interactiune </b> - reprezinta un mod comportament care descrie/defineste schimbul de mesaje intre obiecte in cadrul ununi anumit contez si pentru atingerea unui anumit scop ;
+</br>
+ 
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=p001.png /></p> 
+
+ <b>Automatul</b> - reprezinta un algoritm/mod de comportament care descrie/defineste o succesiune de stari prin care trece obiectul pe parcursul ciclului sau de viata raspunzand la diferite evenimente si reactile lor la aceste evenimete ; ( element - dreptunghi cu colturi rotungite)
+
+
+- <b style="color:#0066ff">Entitati de grupare</b> - elementele organizatorice ale modului UML, ele reprezintablocuri ale modelului ( care impart modelul in subunitati , de numeste package)
+
+DEF: </br>
+        Package - macanizm universal de organizare a efenimentelor in grup
+
+- <b style="color:#0066ff">Entitati de adnotare:</b> 
+reprezinta elementul explicativ al modelului UML, de regula sunt comentarii, explicatii sau observatii </br>
+
+
+<b>Remarca</b> - simplu simbol ce reprezinta comentariile sau constrangerile (restrictiile), se reprezinta prin dreptunghi cu colt indoiat (pliat);
+
+</br></br>
+<h1 align=center>Relatiile</h1>
+
+<b>Tipuri de relatii:</b>
+1. Dependenta
+2. Asocierea
+3. Generalizarea
+4. Realizarea
+
+- <b style="color:#0066ff">Dependenta </b>- relatie semantintica intre doua entititati unde modificare unei din ele ( entitatea independenta) poate celei de-a doua(intitatea dependenta) ( reprezentata cu o sageata cu linie intrerupta directionata spre entitatea dependenta, de la entitatea independenta); </br>
+- <b style="color:#0066ff">Asocierea </b>- relatie de structura ce reprezinta legatura intre entitati ( poate avea moltitudini:  0->1, 0->M, 1->M, M->M);
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=p002.png /></p>  </br>
+  <p align=center>
+!!! &nbsp;&nbsp;&nbsp;
+  Cuvintele cheie de tip ITALIC , in UML sunt comentarii &nbsp;&nbsp;&nbsp;
+!!!
+</p> </br>
+
+- <b style="color:#0066ff">Generalizarea </b> -
+
+- <b style="color:#0066ff">Realizarea </b> -
+
 
 
 <b></b>
- 
