@@ -88,8 +88,8 @@ _	Represents a single character
 
 
 - What is (are) the correct syntax of concatenate function in MS SQL?
-<p align="center" style="color:#0066ff">||
-+
+<p align="center" style="color:#0066ff">
++ and 
 CONCAT()</p>
 
 - Do CAST() and CONVERT() functions behave similarly in MS SQL?
@@ -145,3 +145,112 @@ DATEDIFF(YY, FutureModifiedDate, GETDATE())
 *
 2
 -2
+</br></br>
+# Laboratory work #4
+ 
+<h2 align="center">(Group By and Having)</h2> 
+<p align="center">https://www.youtube.com/watch?v=oWkvHodS9cA</p></br>
+
+Which function does not belong to the same group as others?
+*
+MIN()
+COUNT()
+ROUND()
+AVG()
+Look at the query below. Is it a valid one?
+
+SELECT GroupName, AVG(Mark), COUNT(*)
+FROM Students
+GROUP BY GroupName;
+*
+Yes
+No
+Look at the query below. Is it a valid one?
+
+SELECT GroupName, AVG(Mark), COUNT(*)
+FROM Students
+ORDER BY GroupName
+GROUP BY GroupName;
+*
+Yes
+No
+What is the difference between GROUP BY and GROUP BY WITH ROLLUP?
+*
+How behaves GROUP BY WIH ROLLUP if you are grouping by two or more fields?
+*
+What is the difference between WHERE and HAVING clauses?
+*
+Using Address and CustomerAddress tables from AdventureWorksLT2019 database, write a query that:
+
+Calculates a count of records under  each separate [Address.CountryRegion] and [CustomerAddress.AddressType] fields combination. The query should not return row if the count is greater than 100. It should also take only the records with non-NULL values in [Address.AddressLine2] field.
+
+Please provide the whole query as the answer
+*
+Captionless Image
+
+
+
+
+
+</br></br>
+# Laboratory work #4
+ 
+
+
+
+
+Table HumanResources.Employee from AdventureWorks2019 database contains a field called LoginID. It is filled with the data using the pattern [db_name]\[username] as shown at the screenshot below.
+Write a query which returns usernames only (data after "\" symbol) as shown at highlighted part of the screenshot
+
+
+Please provide the whole query as the answer
+<p align="center" style="color:#0066ff">
+USE AdventureWorks2019
+SELECT RIGHT(LoginID,len(LoginID)-CHARINDEX('\',LoginID )) AS LoginID FROM HumanResources.Employee
+</p>
+</br></br>
+Check the content of Person.Person, Person.PersonPhone and Person.PhoneNumberType tables from  AdventureWorks2019 database.
+
+Write a query that shows each person's First Name, Last Name, Phone Number, but only for the recors with "Employee" Person Type and "Work" Phone Type (please do not "hardcode" the phone type, use subquery or join instead)
+
+Please provide the whole query as the answer
+*
+Prerequisite: run the following query in the AdventureWorks2019 database connection script:
+
+delete from Person.EmailAddress where BusinessEntityID between 286 and 298;
+
+Then using tables Person.Person and Person.EmailAddress write a query which will show all the fields from the Person table only for the entries which does not have an email set up in EmailAddress table.
+
+Please provide the whole query as the answer
+*
+Prerequisite: run the following query in AdventureWorks2019 database :
+
+Update HumanResources.JobCandidate set BusinessEntityID = 212 where jobCandidateId = 6;
+
+Table HumanResources.JobCandidate contains info about candidates. Entries with non-NULL BusinessEntityID field already have an interviewer assigned - this BusinessEntityID represents interviewer's ID.
+
+So, using the following tables:
+
+HumanResources.JobCandidate
+HumanResources.Employee
+Person.Person
+Person.PersonPhone
+Person.PhoneNumberType
+
+Write a query which returns info about all currently assigned  interviewers in JobCandidate table: their FirstName and LastName, and a PhoneNumber if the type of PhoneNumber is "Work"; if it's not "Work" - default Phone Number to '8-800-555-35-35'
+Info about the same interviewer should appear only ONCE.
+
+Please provide the whole query as the answer
+*
+Captionless Image
+This excercise uses AdventureWorksLT2019 database, not AdventureWorks2019 - be careful
+
+Write a query which will show all Customer FN/LN from table Customers and their respective Address ID's from table CustomerAddress. In case if there's more than one address for a particluar customer in the CustomerAddress table, choose the record with AddressType = 'Main Office'. Result dataset should contain only 1 row for each Customer.
+
+Don't be shy to use subqueries.
+
+Please provide the whole query as the answer 
+
+
+<p align="center" style="color:#0066ff">False</p>
+<p align="center" style="color:red">False</p>

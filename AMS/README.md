@@ -84,7 +84,7 @@ c.AMS | FCIM UTM Spring 2022 | 104 | 28.09.2021
 - <b style="color:#0066ff">Entitati de grupare</b> - elementele organizatorice ale modului UML, ele reprezintablocuri ale modelului ( care impart modelul in subunitati , de numeste package)
 
 DEF: </br>
-        Package - macanizm universal de organizare a efenimentelor in grup
+        <b>Package</b> - macanizm universal de organizare a efenimentelor in grup
 
 - <b style="color:#0066ff">Entitati de adnotare:</b> 
 reprezinta elementul explicativ al modelului UML, de regula sunt comentarii, explicatii sau observatii </br>
@@ -115,10 +115,40 @@ reprezinta elementul explicativ al modelului UML, de regula sunt comentarii, exp
 Agregarea - reprezinta relatia dintre partea intraga si partea componenta (la distrugerea partii intregi nu distruge si partea componenta);</br></br>
 &nbsp;&nbsp; <b>Compozitia</b> - relatia dintre partea intreaga si partea componenta, insa cu o forma mai specifica, de parca partea componenta este in interiorul partii intregi; ( partea componenta nu poate exista fara partea intreaga, cu alte cuvinte la distrugerea partii intregi se distruge si partea componenta) </br>
 
-- <b style="color:#0066ff">Generalizarea </b> -
+- <b style="color:#0066ff">Generalizarea </b> - relatie de tip specializare/generalizare unde un obiect specializat poate inlocui un obiect generealizat (obiectul specializat vine in locul celui generalizat (relatie de tip mostenire)), (o linie cu un triunghi la capat (sageata cu varf alb))
 
-- <b style="color:#0066ff">Realizarea </b> -
+- <b style="color:#0066ff">Realizarea </b> -relatie semantica dintre doua entitati unde una dintre ele reprezinta un contract iar cea de-a doua o realizeaza( sageata cu linie intrerupta si varf de culoare alba)
+</br></br>
+se utilizeasa in doua cazuri: 
+ 1. intre interfata si clase sau componte ce o realizeaza ( pe aceasta interfata)
+2. intre cazuri de utilizare si colaborarea ce o realizeaza
 
 
+</br></br>
+<h1 align=center>Diagrame</h1>
+Tipuri de diagrame:
 
+1. use-case
+2. de interactiune ( de segventa si de colaborare )
+3. de clase
+4. de comportament ( de stare si de de activitate )
+5. de componente
+6. de plasare
+</br>
+( daca 5. si 6. diagrama este de "realizare")
+</br></br>
+
+Starea din diagrama de stari reprezinta o activitate
+
+Starea din diagrama de activitati reprezinta o actiune
+</br></br>
+<b>Cazuri de utilizare -</b> un sir actiuni care trebuie sa fie executate de catre sistem in colabirare cu un anumit actor
+
+
+Actor - entitiate externa fata de sistemul proiectat/modelat care colaboreaza/interactioneaza cu sistemul utilizand functionalitatile lui pentru un anumit scop (numele lui se scrie cu majuscula)
+
+Interfata - repezinta o totalitate de operatii ce asigura serviciile necesare pentru actori ( pot contine doar operatii fara indicarea specificatilor lor de relizare, nu pot contine atribute sau/nici stari) (ex: o interfata formal poate fi considerata clasa abstracta faca atribute si metode, doar cu reprezentarea operatiolor abstracte)
+
+
+Colaborare - defineste o interactiune care reprezinta un efect corporativ
 <b></b>
