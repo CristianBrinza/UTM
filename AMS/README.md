@@ -39,6 +39,11 @@ Suplimentare
 
 8.	[http://www.omg.org/ techprocess/meetings/schedule/UML_RTF.html]
 9.	[http://www.citforum.ru/book/umlbooch/umlbooch_c.shtml]
+
+<p  align=center ><img align='center' style="height: 70%;
+  width: 70%; " src=p004.png /></p> 
+
+
 </br></br></br>
 <p align=right>  
 c.AMS | FCIM UTM Spring 2022 | 104 | 21.09.2021
@@ -194,13 +199,13 @@ Obiect -  instanta a clasei ( se reprezinta sub forma de dreptunghi, numele obie
 6. <[<b> : C </b>]> (doar clasa, obiect asincron )
 
 
-<b>Focus control</b> - (linia vietii, arata timpul in care elementul e ectiv, iar "X" momentul de timp in care obiectul e distrus)
+<b>Focus control</b> - (linia vietii, arata timpul in care elementul e ectiv, iar "X" momentul de timp in care obiectul e distrus)(imaginea de mai jos)
 
 <p  align=center ><img align='center' style="height: 20%;
   width: 20%; " src=p003.png /></p> 
 
 
-Asincron (dreptunghi vertical in imaginea de mai sus)- transmite un semnal fara a primi raspuns
+<b>Asincron</b> (dreptunghi vertical in imaginea de mai sus) - transmite un semnal fara a primi raspuns
 
 <b>Stereotipuri </b> :
 
