@@ -23,12 +23,28 @@ Chisinau 2022
 </p>
 <hr></br>
 </br></br>
+
+
+<p align=center>REFERINȚE BIBLIOGRAFICE</p>
+Principale	
+
+1.  Anca Daniela Ioniţă, Modelarea în ingineria sistemelor de programare. Bucureşti, BIC ALL, 2003. – 207 pag.
+2.	Dorin Zaharia, Ioan Roşca, Proiectarea obiectuală a sistemelor informaţionale. Bucureşti, DuAl Tech, 2003. – 341 pag. 
+3.	D. M. Popovici, I.M. Popovici, J. G. Rican, Proiectarea şi implementarea SOFRWARE. Bucureşti, Teora, 1999. – 238 pag. 
+4.	Daniela Saru, Anca D. Ioniţă, Sisteme de programe orientate pe obiecte. Bucureşti, ALL Educational, 2000. – 318 pag. 
+5.	D. Bocu, R. Bocu, Modelare obiect orientata cu UML. Bucureşti, Albastra, 2007. – 251 pag.
+6.	С. А. Трофимов, CASE – технологии практическая работа в Rational Rose. M., Бином, 2002. – 284 стр. 
+7.	AMSI. Îndrumar pentru prelegeri. R. Melnic, Şt. Marin, N. Sava,	forma electronică.
+Suplimentare
+
+8.	[http://www.omg.org/ techprocess/meetings/schedule/UML_RTF.html]
+9.	[http://www.citforum.ru/book/umlbooch/umlbooch_c.shtml]
+</br></br></br>
 <p align=right>  
 c.AMS | FCIM UTM Spring 2022 | 104 | 21.09.2021
 </p>
 
-
-Limbaj de programare – are cuinte cheie
+Limbaj de programare – are cuvinte cheie
 Limbaj de modelare – are entitati si relatii
 
 Entitatile ULM:
@@ -138,9 +154,9 @@ Tipuri de diagrame:
 ( daca 5. si 6. diagrama este de "realizare")
 </br></br>
 
-Starea din diagrama de stari reprezinta o activitate
+Starea din diagrama de stari reprezinta o "activitate"
 
-Starea din diagrama de activitati reprezinta o actiune
+Starea din diagrama de activitati reprezinta o "actiune" 
 </br></br>
 <b>Cazuri de utilizare</b>- un sir actiuni care trebuie sa fie executate de catre sistem in colabirare cu un anumit actor
 
@@ -158,4 +174,46 @@ Starea din diagrama de activitati reprezinta o actiune
 - Use-Case -> Use-Case
 - Use-Case -> Interface
 - Use-Case -> Colaborare 
+</br></br>
+
+<b>Interactiune</b>
+- Segventa - reprezinta schimbul de mesaje in timp ( merg de la prima pana la ultima)
+- Colaborare - reprezinta schimbul de mesaje in spatiu, accentul este pe diagrame (unul la unul)
+
+Obiect -  instanta a clasei ( se reprezinta sub forma de dreptunghi, numele obiectului este subliniea)
+
+!!! Elementele sau obiectele  care sunt subliniate sunt " instante"
+
+6 tipuri : 
+
+1. OCP ( N_o : T_c : T_p )  ---> <[<b> O : C :: P </b>]>  (obiectul : clasa :: pachet)
+2. <[<b> O : C </b>]> ( obiectul "O" al clasei "C")
+3. <[<b> O ::</b>]> ( "Obiect Orfan" , obiectul nu este atribuit)
+4. <[<b> O </b>]>(stim cine este, dar nu detalii.... , doar obiectul "O")
+5. <[<b> : C :: P </b>] ( obiect anonim al clasei "C" pachetul "P", numele obiectului nu se stie : poate fi Radu sau ION sau ...)
+6. <[<b> : C </b>]> (doar clasa, obiect asincron )
+
+
+<b>Focus control</b> - (linia vietii, arata timpul in care elementul e ectiv, iar "X" momentul de timp in care obiectul e distrus)
+
+<p  align=center ><img align='center' style="height: 20%;
+  width: 20%; " src=p003.png /></p> 
+
+
+Asincron (dreptunghi vertical in imaginea de mai sus)- transmite un semnal fara a primi raspuns
+
+<b>Stereotipuri </b> :
+
+1. "create"
+2. "destroy"
+3. "call"
+4. "send"
+5. "return"
+
+
+----> - 2,5
+
+-----+> - 1,2,5
+
+-- -- > - 2,3,4
 <b></b>
