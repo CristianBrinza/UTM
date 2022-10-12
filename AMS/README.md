@@ -142,13 +142,20 @@ Starea din diagrama de stari reprezinta o activitate
 
 Starea din diagrama de activitati reprezinta o actiune
 </br></br>
-<b>Cazuri de utilizare -</b> un sir actiuni care trebuie sa fie executate de catre sistem in colabirare cu un anumit actor
+<b>Cazuri de utilizare</b>- un sir actiuni care trebuie sa fie executate de catre sistem in colabirare cu un anumit actor
 
 
-Actor - entitiate externa fata de sistemul proiectat/modelat care colaboreaza/interactioneaza cu sistemul utilizand functionalitatile lui pentru un anumit scop (numele lui se scrie cu majuscula)
+<b>Actor</b> - entitiate externa fata de sistemul proiectat/modelat care colaboreaza/interactioneaza cu sistemul utilizand functionalitatile lui pentru un anumit scop (numele lui se scrie cu majuscula)
 
-Interfata - repezinta o totalitate de operatii ce asigura serviciile necesare pentru actori ( pot contine doar operatii fara indicarea specificatilor lor de relizare, nu pot contine atribute sau/nici stari) (ex: o interfata formal poate fi considerata clasa abstracta faca atribute si metode, doar cu reprezentarea operatiolor abstracte)
+<b>Interfata</b> - repezinta o totalitate de operatii ce asigura serviciile necesare pentru actori ( pot contine doar operatii fara indicarea specificatilor lor de relizare, nu pot contine atribute sau/nici stari) (ex: o interfata formal poate fi considerata clasa abstracta faca atribute si metode, doar cu reprezentarea operatiolor abstracte)
 
 
-Colaborare - defineste o interactiune care reprezinta un efect corporativ
+<b>Colaborare</b> - defineste o interactiune care reprezinta un efect corporativ
+
+<b>Tipuri de relatii</b> (Colaborare):
+- Actor -> Actor
+- Actor -> Use-Case
+- Use-Case -> Use-Case
+- Use-Case -> Interface
+- Use-Case -> Colaborare 
 <b></b>
