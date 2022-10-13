@@ -36,7 +36,7 @@ void draw() { // Draw stuff
       ss = 1;
     }
 
-  } else if (mouseX < 20) {
+  } else if (mouseX < 20 || mouseY < 20 || mouseX > width - 20 || mouseY > height - 20) {
     fill(255);
     stroke(255);
     rect(0, 0, width, height);
