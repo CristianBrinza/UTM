@@ -1,11 +1,14 @@
-float r, b, g, a, diam, x, y;
+public float r, b, g, a, diam, x, y;
 int ss = 0;
 
 void setup() {
   size(480, 270);
   background(255);
 }
-
+ float ran(){
+    r = random(255);
+   return r;
+ }
 void draw() { // Draw stuff
 
   // Use values to draw an ellipse
@@ -14,11 +17,11 @@ void draw() { // Draw stuff
   // "if mouseX is greater than 0"
   if (mouseX > 20 && mouseY > 20 && mouseX < width - 20 && mouseY < height - 20 && ss == 0) {
 
-    for (int t = 0; t <= 5; t++) {
+    for (int t = 0; t <= 8; t++) {
 
       // Each time through draw(), new random 
       // numbers are picked for a new ellipse.
-      r = random(255);
+     ran();
       g = random(255);
       b = random(255);
       a = random(255);
@@ -31,6 +34,7 @@ void draw() { // Draw stuff
       y = random(height);
 
       noStroke();
+      System.out.print(ran());
       fill(r, g, b, a);
       ellipse(x, y, diam, diam);
       ss = 1;
