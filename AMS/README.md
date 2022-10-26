@@ -231,27 +231,12 @@ Tipuri de diagrame:
 3. de clase
 4. de comportament ( de stare si de de activitate )
 5. de componente
-6. de plasare
-<dl>
-  <dt> -Diagrame cazurilor de utilizare (use case diagram) </dt>
-  <dt>-	Diagrame de clase (class diagram) </dt>
-  <dt>-	Diagrame de comportament (behavior diagrams) </dt>
-  <dd>- Diagrame de stări (statechart diagram) </dd>
--	Diagrame de secvenţă (sequence diagram)
--	Diagrame de colaborare (collaboration diagram)  
-  <dd>-	Diagrame de activităţi (activity diagram) </dd>
-  <dd>-	Diagrame de interacţiune (interaction diagrams) </dd>
-  <dt>-	Diagrame de realizare (implementation diagrams) </dt>
-  <dd>-	Diagrame de componente (component diagram) </dd>
-  <dd>-	Diagrame de plasare (deployment diagram) </dd>
-</dl>	
+6. de plasare  &nbsp;&nbsp;&nbsp;&nbsp;   ( daca 5. si 6. diagrama este de "realizare")
+
+<p  align=center ><img align='center' style="height: 40%;
+  width: 40%; " src=documetation_resources/p023.png /></p>
 
 
-
-
-</br>
-( daca 5. si 6. diagrama este de "realizare")
-</br></br>
 
 Starea din diagrama de stari reprezinta o "activitate"
 
@@ -261,8 +246,18 @@ Starea din diagrama de activitati reprezinta o "actiune"
 
 
 <b>Actor</b> - entitiate externa fata de sistemul proiectat/modelat care colaboreaza/interactioneaza cu sistemul utilizand functionalitatile lui pentru un anumit scop (numele lui se scrie cu majuscula)
+<p  align=center ><img align='center' style="height: 5%;
+  width: 5%; " src=documetation_resources/p024.jpg /></p>
 
-<b>Interfata</b> - repezinta o totalitate de operatii ce asigura serviciile necesare pentru actori ( pot contine doar operatii fara indicarea specificatilor lor de relizare, nu pot contine atribute sau/nici stari) (ex: o interfata formal poate fi considerata clasa abstracta faca atribute si metode, doar cu reprezentarea operatiolor abstracte)
+<b>Interfata</b> -(interface) specifică parametrii modelului care sunt vizibili din afară fără indicarea structurii lor interne. 
+
+repezinta o totalitate de operatii ce asigura serviciile necesare pentru actori ( pot contine doar operatii fara indicarea specificatilor lor de relizare, nu pot contine atribute sau/nici stari) (ex: o interfata formal poate fi considerata clasa abstracta faca atribute si metode, doar cu reprezentarea operatiolor abstracte)
+
+În limbajul UML interfaţa este clasificatorul care caracterizeză numai o parte limitată a comportării unei entităţi modelate. 
+
+Referitor la diagrama cazurilor de utilizare interfeţele definesc o totalitate de operaţii ce asigură serviciile necesare sau funcţionalitatea pentru actorii. 
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p025.png /></p>
 
 
 <b>Colaborare</b> - defineste o interactiune care reprezinta un efect corporativ
@@ -292,6 +287,21 @@ Obiect -  instanta a clasei ( se reprezinta sub forma de dreptunghi, numele obie
 5. <[<b> : C :: P </b>] ( obiect anonim al clasei "C" pachetul "P", numele obiectului nu se stie : poate fi Radu sau ION sau ...)
 6. <[<b> : C </b>]> (doar clasa, obiect asincron )
 
+Următoarele sunt variante de indicare a textului în înteriorul dreptunghiului.
+-	: С – un obiect anonim creat pe baza clasei С. 
+-	/ R – un obiect anonim cu rolul R. 
+-	/ R : С – un obiect anonim creat pe baza clasei С cu rolul R. 
+-	О / R – un obiect cu numele O cu rolul R. 
+-	О : С – un obiect cu numele O creat pe baza clasei С. 
+-	О / R : С – un obiect cu numele O creat pe baza clasei С cu rolul R. 
+-	О sau obiectul cu numele О. 
+-	О : – un "obiect orfan" cu numele О. 
+-	/ R – un rol cu numele R. 
+-	: С – un rol anonim pe baza clase С. 
+-	/ R : С –un rol cu numele R pe baza clase С. 
+
+<p  align=center ><img align='center' style="height: 40%;
+  width: 40%; " src=documetation_resources/p026.png /></p> 
 
 <b>Focus control</b> - (linia vietii, arata timpul in care elementul e ectiv, iar "X" momentul de timp in care obiectul e distrus)(imaginea de mai jos)
 
