@@ -16,10 +16,14 @@
 # Anul I </br>
 # Anul II (2022-2023)</br>
 
-- AMS [Theory   ](year_2/AMS/README.md) |  [Labs ](year_2/AMS/Labs) 
-- BD [ Labs theory](year_2/BD/README.md) 
-- GC [Labs](year_2/GC) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/GC/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
-- POO [Labs](year_2/POO) 
+
+
+| Discipline  | Theory | Laboratories | Templates|
+| ------------- | -------------                      |-------------|-------------|
+| AMS           | [Theory   ](year_2/AMS/README.md)  |[Labs ](year_2/AMS/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/AMS/Labs/Model_raport.docx)|
+|BD | [ Labs theory](year_2/BD/README.md) |||
+|GC ||[Labs](year_2/GC) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/GC/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
+|POO ||[Labs](year_2/POO)|| 
 
 
 </br></br>
