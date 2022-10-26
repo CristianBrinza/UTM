@@ -74,8 +74,8 @@ Entitati de structura:
 2) <b>Interfata</b> - (interface) este o totalitate de operaţii care definesc servicii oferite de clasă sau componentă.
 
 - Interfata: Name, Dialog
-<p  align=center ><img align='center' style="height: 20%;
-  width: 20%; " src=documetation_resources/p006.png /></p> 
+<p  align=center ><img align='center' style="height: 10%;
+  width: 10%; " src=documetation_resources/p006.png /></p> 
 
 3) <b>Use Case</b> (caz de utilizare) - 
 este o descriere a consecutivităţii de acţiuni îndeplinite de sistem care produc un rezultat semnificativ pentru un anumit actor. 
@@ -96,8 +96,8 @@ este o descriere a consecutivităţii de acţiuni îndeplinite de sistem care pr
   width: 30%; " src=documetation_resources/p010.png /></p> 
 
 7) <b>Nod</b> - Nodul (node) este un element real (fizic) al unui sistem care reprezintă un mijloc de calcul cu un anumit volum de memorie şi deseori cu capacitate de prelucrare a informaţiei şi care există în timpul funcţionării unui produs soft. 
-<p  align=center ><img align='center' style="height: 15%;
-  width: 15%; " src=documetation_resources/p011.png /></p> 
+<p  align=center ><img align='center' style="height: 10%;
+  width: 10%; " src=documetation_resources/p011.png /></p> 
 
 
 </br>
@@ -166,8 +166,18 @@ Acestea sunt comentarii destinate descrierii adiţionale, explicaţiei sau obser
 3. Generalizarea
 4. Realizarea
 
-- <b style="color:#0066ff">Dependenta </b>- relatie semantintica intre doua entititati unde modificare unei din ele ( entitatea independenta) poate celei de-a doua(intitatea dependenta) ( reprezentata cu o sageata cu linie intrerupta directionata spre entitatea dependenta, de la entitatea independenta); </br>
-- <b style="color:#0066ff">Asocierea </b>- relatie de structura ce reprezinta legatura intre entitati ( poate avea moltitudini:  0->1, 0->M, 1->M, M->M);
+- <b style="color:#0066ff">Dependenta </b>- dependency) este o relaţie semantică între două entităţi astfel încît modificarea uneia din ele, a celei independente, poate influenţa semantica celeilalte, dependente.  </br>
+
+<p  align=center ><img align='center' style="height: 20%;
+  width: 20%; " src=documetation_resources/p017.png /></p> 
+
+- <b style="color:#0066ff">Asocierea </b>- (association) este o relaţie de structură care descrie o totalitate de legături, prin legătură se subînţelege conexiunea semantică între obiecte. 
+
+În calitate de simboluri suplementare pot fi utilizate numele unei asocieri, numele şi multiplicitatea claselor – rolurile asocierii. 
+
+!!! Numele asocierii nu este un element obligatoriu. Dacă numele este dat, atunci el se scrie cu majusculă lînga linia ce corespunde asocierei. !!!
+
+Relatie de structura ce reprezinta legatura intre entitati ( poate avea moltitudini:  0->1, 0->M, 1->M, M->M);
 <p  align=center ><img align='center' style="height: 30%;
   width: 30%; " src=documetation_resources/p002.png /></p>  </br>
   <p align=center>
@@ -177,10 +187,31 @@ Acestea sunt comentarii destinate descrierii adiţionale, explicaţiei sau obser
 </p> </br>
 
 &nbsp;&nbsp; <b>Asocierea</b> - are caz particular / forma speciala -> "Agregare", acesta la randul sau are o forma speciala -> "Compozitia" ; 
-Agregarea - reprezinta relatia dintre partea intraga si partea componenta (la distrugerea partii intregi nu distruge si partea componenta);</br></br>
+Agregarea - reprezinta relatia dintre partea intraga si partea componenta (la distrugerea partii intregi nu distruge si partea componenta);
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p018.png /></p> </br></br>
+
+<b>Agregare</b> (aggregation) este o anumită relaţie între întreg şi părţile lui componente. 
+
+Această relaţie are un sens fundamental pentru descrierea sistemelor complexe fiindcă se utilizează pentru reprezentarea legăturilor «parte-întreg». 
+
+Dezvăluind structura interioară a sistemului, relaţia de agregare arată din ce elemente constă sistemul şi cum elementele sunt legate. 
+
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p019.png /></p>
+
+<b>Compoziţie</b> - este cazul particular al relaţiei de agregare. Această relaţie este destinată prezentării formei speciale a relaţiei «parte-întreg» în care părţile componente sunt în interiorul părţiii întregi. Specifica legăturii între ele constă în aceea că părţile componente nu pot exista fără partea întreagă, adică cu distrugerea întregului se destrug şi părţile componente a lui.
+
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p020.png /></p>
+
 &nbsp;&nbsp; <b>Compozitia</b> - relatia dintre partea intreaga si partea componenta, insa cu o forma mai specifica, de parca partea componenta este in interiorul partii intregi; ( partea componenta nu poate exista fara partea intreaga, cu alte cuvinte la distrugerea partii intregi se distruge si partea componenta) </br>
 
-- <b style="color:#0066ff">Generalizarea </b> - relatie de tip specializare/generalizare unde un obiect specializat poate inlocui un obiect generealizat (obiectul specializat vine in locul celui generalizat (relatie de tip mostenire)), (o linie cu un triunghi la capat (sageata cu varf alb))
+- <b style="color:#0066ff">Generalizarea </b> -
+(generalization) este o relaţie de tip «specializare/generalizare» în urma căreia un obiect al elementului specializat (descendent) poate substitui obiectul elementului generalizat (părinte). Descendentul (child) moşteneşte structura şi comportamentul părintelui (parent) său. (relatie de tip mostenire)
+
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p021.png /></p>
 
 - <b style="color:#0066ff">Realizarea </b> -relatie semantica dintre doua entitati unde una dintre ele reprezinta un contract iar cea de-a doua o realizeaza( sageata cu linie intrerupta si varf de culoare alba)
 </br></br>
@@ -188,6 +219,8 @@ se utilizeasa in doua cazuri:
  1. intre interfata si clase sau componte ce o realizeaza ( pe aceasta interfata)
 2. intre cazuri de utilizare si colaborarea ce o realizeaza
 
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p022.png /></p>
 
 </br></br>
 <h1 align=center>Diagrame</h1>
@@ -199,6 +232,23 @@ Tipuri de diagrame:
 4. de comportament ( de stare si de de activitate )
 5. de componente
 6. de plasare
+<dl>
+  <dt> -Diagrame cazurilor de utilizare (use case diagram) </dt>
+  <dt>-	Diagrame de clase (class diagram) </dt>
+  <dt>-	Diagrame de comportament (behavior diagrams) </dt>
+  <dd>- Diagrame de stări (statechart diagram) </dd>
+-	Diagrame de secvenţă (sequence diagram)
+-	Diagrame de colaborare (collaboration diagram)  
+  <dd>-	Diagrame de activităţi (activity diagram) </dd>
+  <dd>-	Diagrame de interacţiune (interaction diagrams) </dd>
+  <dt>-	Diagrame de realizare (implementation diagrams) </dt>
+  <dd>-	Diagrame de componente (component diagram) </dd>
+  <dd>-	Diagrame de plasare (deployment diagram) </dd>
+</dl>	
+
+
+
+
 </br>
 ( daca 5. si 6. diagrama este de "realizare")
 </br></br>
@@ -252,17 +302,25 @@ Obiect -  instanta a clasei ( se reprezinta sub forma de dreptunghi, numele obie
 <b>Asincron</b> (dreptunghi vertical in imaginea de mai sus) - transmite un semnal fara a primi raspuns
 
 <b>Stereotipuri </b> :
+În limbajul UML sunt presupuse numai acţiuni standarde, care se execută la primirea mesajului respectiv. 
 
-1. "create"
-2. "destroy"
-3. "call"
-4. "send"
-5. "return"
+Ele pot fi indicate în diagrama de secvenţă sub forma de stereotipuri ataşate mesajelor respective şi se scriu în ghilimele. 
+
+Pentru diagrama de secvenţă sunt următoarele stereotipuri de mesaje:
+
+- 	"call" – invocă chemarea operaţiei sau procedurei obiectului-destinatar;
+-	"return" – returnează valoarea operaţiei executate sau procedurei obiectului apelant;
+-	"create" – crează un alt obiect pentru executarea anumitor acţiuni;
+-	"destroy" – mesaj cu o cerinţă clară de a distruge obiectul corespunzător.Se transmite în cazul când este necesar pentru a opri acţiunile nedorite a obiectului din sistemul existent, sau atunci când obiectul nu mai este necesar şi ar trebui să elibereze resursele alocate lui;
+-	"send" – trimiterea unui semnal care este iniţializat asincron de către un obiect şi este acceptat de altul. 
+(Diferenţa între un semnal şi un mesaj constă în fapt că semnalul trebuie să fie descris în clasa obiectul căruia iniţializează transmiterea lui.)
 
 
-----> - 2,5
+În afară de  stereotipuri, mesajul poate avea denumirea sa proprie, a operaţiunii. 
 
------+> - 1,2,5
+În acest caz lîngă săgeată se scrie numele operaţiei cu paranteze rotunde în care se indică parametrii sau argumentele operaţiei respective. 
 
--- -- > - 2,3,4
+Dacă parametrii lipsesc atunci parantezele rămîn neapărat după numele operaţiei.
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p016.png /></p>
 <b></b>
