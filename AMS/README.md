@@ -41,7 +41,7 @@ Suplimentare
 9.	[http://www.citforum.ru/book/umlbooch/umlbooch_c.shtml]
 
 <p  align=center ><img align='center' style="height: 70%;
-  width: 70%; " src=p004.png /></p> 
+  width: 70%; " src=documetation_resources/p004.png /></p> 
 
 
 </br></br></br>
@@ -58,27 +58,52 @@ Entitatile ULM:
 3) grupare
 4) adnotare
 
-<b>Entitati</b> - elementele obiect orientate ale limbajului ULM
+<b>Entitati</b> - elementele obiect orientate ale limbajului UML
 
-- <b style="color:#0066ff">Entitati de structura</b> - substantivele ale limbajului ULM. De regula ele reprezinta partile statice ale modelului care crespund elementelor
+- <b style="color:#0066ff">Entitati de structura</b> - substantivele ale limbajului UML. De regula ele reprezinta partile statice ale modelului care crespund elementelor
   fizice si conceptuale ale sistemului. 
 
 Entitati de structura:
-1) <b>Clasa</b> - blueprintul unui obiect. Descrierea multitudinii de obiecte cu aceleasi atribute, metode si semantice
-Clasa: Name, Atribute, Methods
-Cuvintele cheie scrise intre paranteze figurate {} reprezinta constrangere(constanta).
-Numele se incepe cu majuscula si nu poate contine caractere speciale.
-2) <b>Interfata</b> - totalitatea de operatii care definesc serviciile oferite de catre clasa sau component
-Interfata: Name, Dialog
-3) <b>Use Case</b> (caz de utilizare - descrie consecutatea de actiuni indeplinite de catre un sistem si care produc un rezultat semnificativ pentru un anumit actor
-4) <b>Colaborarea</b> - defineste o interactiune, care defineste o interactiune, reprezinta o totalitate un efect corporativ.
-5) <b>Active class</b> (clasa active) - reprezinta clasa obiectele careia sunt antrenate in una sau mai multe procese si pot initia actiuni administrative
-6) <b>Componenta</b> - element fizica a sistemului care corecpunde unui anumit set de interfete si asigura realizarea lor 
-7) <b>Nod</b> - element real al sistemului care repezinta un mijloc de calcul cu un anumit volum de memorie, deseori cu posibilitatea prelucrarii informatiei, si exista in timpul functionarii/rularii/execuarii produsului software (reprezentat grafic un "cub")
+1) <b>Clasa</b> - blueprintul unui obiect. (class) este o descriere a unei totalităţi de obiecte cu atribute, operaţii, relaţii şi semantica comună.</br>
+- Clasa: Name, Atribute, Methods</br>
+- Cuvintele cheie scrise intre paranteze figurate {} reprezinta constrangere(constanta).</br>
+-  Numele se incepe cu majuscula si nu poate contine caractere speciale.
+<p  align=center ><img align='center' style="height: 15%;
+  width: 15%; " src=documetation_resources/p005.png /></p> 
 
-In afara de acestea 7, mai execta .............. , </br> </br>
-<b>Tipuri de componente:</b>
-aplicatii, tabele, fisiere, pagini veb, documente, siruri, procese (clase active),biblioteci
+2) <b>Interfata</b> - (interface) este o totalitate de operaţii care definesc servicii oferite de clasă sau componentă.
+
+- Interfata: Name, Dialog
+<p  align=center ><img align='center' style="height: 20%;
+  width: 20%; " src=documetation_resources/p006.png /></p> 
+
+3) <b>Use Case</b> (caz de utilizare) - 
+este o descriere a consecutivităţii de acţiuni îndeplinite de sistem care produc un rezultat semnificativ pentru un anumit actor. 
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p008.png /></p> 
+
+4) <b>Colaborarea</b> - (collaboration) defineşte o interacţiune, ea reprezintă o totalitate de roluri şi alte elemente care produc un efect cooperativ şi care nu se aduce numai la suma termenilor unei adunări.
+
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p007.png /></p> 
+
+5) <b>Active class</b> (active class) se numeşte o clasă obiectele căreia sunt antrenate în unul sau mai multe procese sau în şiruri (threads) şi deaceea ele pot iniţia o acţiune administrativă. 
+<p  align=center ><img align='center' style="height: 15%;
+  width: 15%; " src=documetation_resources/p009.png /></p> 
+
+6) <b>Componenta</b> - (component) este o parte fizică a sistemului, care corespunde unui anumit set de interfeţe şi asigură realizarea lui. 
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p010.png /></p> 
+
+7) <b>Nod</b> - Nodul (node) este un element real (fizic) al unui sistem care reprezintă un mijloc de calcul cu un anumit volum de memorie şi deseori cu capacitate de prelucrare a informaţiei şi care există în timpul funcţionării unui produs soft. 
+<p  align=center ><img align='center' style="height: 15%;
+  width: 15%; " src=documetation_resources/p011.png /></p> 
+
+
+</br>
+
+- Şapte elemente de bază enumerate - sunt entităţile principale de structură care pot fi utilizate în diagramele UML. 
+- <b>Tipuri de componente:</b> Există şi alte varietăti ale entităţilor de structură: actori, semnale, utilite (tipurile de clase), procese şi şiruri (tipuri de clase active), aplicaţii, documente, fişiere, biblioteci, pagini şi tabele (tipuri de componente).
 
 </br></br></br>
 
@@ -93,25 +118,44 @@ c.AMS | FCIM UTM Spring 2022 | 104 | 28.09.2021
 
 - <b style="color:#0066ff">Entitati de comportament :</b>
 
-<b>Interactiune </b> - reprezinta un mod comportament care descrie/defineste schimbul de mesaje intre obiecte in cadrul ununi anumit contez si pentru atingerea unui anumit scop ;
+<b>Interactiune </b> - (interaction) este un mod de comportare care constă în schimb reciproc de mesaje (messages) între obiecte în cadrul unui anumit context pentru a atinge un anumit scop. Cu ajutorul interacţiunii se descrie atât o operaţie cât şi comportarea unui set de obiecte.;
 </br>
  
 <p  align=center ><img align='center' style="height: 30%;
-  width: 30%; " src=p001.png /></p> 
+  width: 30%; " src=documetation_resources/p001.png />   
+  <img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p012.png /></p> 
 
- <b>Automatul</b> - reprezinta un algoritm/mod de comportament care descrie/defineste o succesiune de stari prin care trece obiectul pe parcursul ciclului sau de viata raspunzand la diferite evenimente si reactile lor la aceste evenimete ; ( element - dreptunghi cu colturi rotungite)
+ <b>Automatul</b> - (state machine) este un algoritm de comportare care defineşte o succesiune de stări prin care trece un obiect sau o interacţiune pe parcursul ciclului de viaţa răspunzînd la diferite evenimente şi reacţiile lui la aceste evenimente. 
+ - Cu ajutorul automatului se descrie comportarea unei clase sau a unei colaborări de clase. 
+ - Cu automatul este legat un şir de alte elemente: stări, tranziţii de la o stare la altă, evenimente care sunt entităti ce iniţiază tranziţii şi tipuri de actiuni - reacţii la tranziţii. 
+ <p  align=center ><img align='center' style="height: 20%;
+  width: 20%; " src=documetation_resources/p013.png /></p> 
+
+</br></br></br>
 
 
-- <b style="color:#0066ff">Entitati de grupare</b> - elementele organizatorice ale modului UML, ele reprezintablocuri ale modelului ( care impart modelul in subunitati , de numeste package)
+- <b style="color:#0066ff">Entitati de grupare</b> - elementele organizatorice ale modului UML, ele reprezintablocuri ale modelului ( care impart modelul in subunitati , denumite package)
 
-DEF: </br>
-        <b>Package</b> - macanizm universal de organizare a efenimentelor in grup
+
+<b>Package</b> - (packages) reprezintă un mecanism universal de organizare în grupe. 
+
+În pachet pot fi plasate entităţile de structură, de comportament şi alte entităţi de grupare. 
+
+Spre deosebire de componentele care există real, în timpul execuţiei unui program, pachetele au caracter pur conceptual, adică ele există doar în timpul elaborării. 
+<p  align=center ><img align='center' style="height: 15%;
+  width: 15%; " src=documetation_resources/p014.png /></p>
+</br></br>
 
 - <b style="color:#0066ff">Entitati de adnotare:</b> 
-reprezinta elementul explicativ al modelului UML, de regula sunt comentarii, explicatii sau observatii </br>
+părţile explicative ale unui model UML. 
+
+Acestea sunt comentarii destinate descrierii adiţionale, explicaţiei sau observaţiei către orice element al unui model. Există numai un singur tip de bază al elementelor de adnotare – remarca. </br>
 
 
-<b>Remarca</b> - simplu simbol ce reprezinta comentariile sau constrangerile (restrictiile), se reprezinta prin dreptunghi cu colt indoiat (pliat);
+<b>Remarca</b> - (note) este numai un simbol pentru reprezentarea comentariilor sau a constrângerilor, legate de un element sau de un grup de elemente.
+<p  align=center ><img align='center' style="height: 20%;
+  width: 20%; " src=documetation_resources/p015.png /></p>
 
 </br></br>
 <h1 align=center>Relatiile</h1>
@@ -125,7 +169,7 @@ reprezinta elementul explicativ al modelului UML, de regula sunt comentarii, exp
 - <b style="color:#0066ff">Dependenta </b>- relatie semantintica intre doua entititati unde modificare unei din ele ( entitatea independenta) poate celei de-a doua(intitatea dependenta) ( reprezentata cu o sageata cu linie intrerupta directionata spre entitatea dependenta, de la entitatea independenta); </br>
 - <b style="color:#0066ff">Asocierea </b>- relatie de structura ce reprezinta legatura intre entitati ( poate avea moltitudini:  0->1, 0->M, 1->M, M->M);
 <p  align=center ><img align='center' style="height: 30%;
-  width: 30%; " src=p002.png /></p>  </br>
+  width: 30%; " src=documetation_resources/p002.png /></p>  </br>
   <p align=center>
 !!! &nbsp;&nbsp;&nbsp;
   Cuvintele cheie de tip ITALIC , in UML sunt comentarii &nbsp;&nbsp;&nbsp;
@@ -202,7 +246,7 @@ Obiect -  instanta a clasei ( se reprezinta sub forma de dreptunghi, numele obie
 <b>Focus control</b> - (linia vietii, arata timpul in care elementul e ectiv, iar "X" momentul de timp in care obiectul e distrus)(imaginea de mai jos)
 
 <p  align=center ><img align='center' style="height: 20%;
-  width: 20%; " src=p003.png /></p> 
+  width: 20%; " src=documetation_resources/p003.png /></p> 
 
 
 <b>Asincron</b> (dreptunghi vertical in imaginea de mai sus) - transmite un semnal fara a primi raspuns
