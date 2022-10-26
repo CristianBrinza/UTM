@@ -13,5 +13,5 @@
 
 - AMS [Theory ](year_2/AMS/README.md) |  [Labs ](year_2/AMS/Labs) 
 - BD [ Labs theory](year_2/BD/README.md) 
-- GC[Labs](year_2/GC) 
-- POO[Labs](year_2/POO) 
+- GC [Labs](year_2/GC) 
+- POO [Labs](year_2/POO) 
