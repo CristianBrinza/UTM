@@ -231,6 +231,52 @@ Don't be shy to use subqueries.
 
 Please provide the whole query as the answer 
 
+</br></br></br>
 
-<p align="center" style="color:#0066ff">False</p>
-<p align="center" style="color:red">False</p>
+
+
+# Laboratory work #6
+<h2 align="center">(SP basics)</h2> 
+<p align="center"> https://www.youtube.com/watch?v=fjNsRV4zLdc</p></>
+<h2 align="center">(
+SP with parameters)</h2> 
+<p align="center"> https://www.youtube.com/watch?v=Vs-atxMs4mw</p></>
+
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+|What is obligatory for a SP creation?|?????</br>BEGIN and END reserved words</br>Mark a batch start with GO reserved word</br>Provide a name to the SP</br>
+|What is the correct syntax to execute getFirstName procedure?|?????</br>SELECT getFirstName</br>EXECUTE getFirstName</br>RUN getFirstName</br>
+|What should be used in case is you want to change the code of SP?
+|What should be used in case is you want to delete the SP?
+|Assuming that you have the following procedure (you can try to create it in AdventuryWorks2019 database):</br></br>CREATE PROC getProduct AS</br>SELECT *</br>FROM Production.Product</br>WHERE SafetyStockLevel >= 100;</br></br>Modify it: is should receive as a perameter the min value of SafetyStockLevel (instead of hardcoding it to 100)</br></br>Please provide the whole SQL query as an answer
+|Considering that @Name - is a parameter of any SP, what is the correct way to apply this parameter to any hardcoded string?|
+?????</br>'@Name is a student'</br>@Name + ' is a student'
+|What should you use if you need to specify a default value for any of SP parameter? 
+|Check the content of Production.ProductListPriceHistory and Production.Product tables from  AdventureWorks2019 database.</br></br>Write a SP that:</br>takes as a parameter @countNumber;</br>returns all the ProductIDs, product Names, count of occurencies and maximum value of ListPrice for all the products that appear in ProductListPriceHistory table @countNumber times.</br></br>Please provide the whole SQL query as an answer |
+
+
+</br></br></br>
+
+
+# Laboratory work #7 
+<h2 align="center">(Variables)</h2> 
+<p align="center"> https://www.youtube.com/watch?v=NmYaOlcbfZM</p></>
+<h2 align="center">(
+Output Parameters & Return Values</h2> 
+<p align="center"> https://www.youtube.com/watch?v=GvRv4V-AK70</p></>
+
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+|The query below returns top 4 records from table Employee (AdventureWorks2019 database)</br></br>SELECT TOP 4 *</br>FROM HumanResources.Employee;</br></br>Please add a parameter @Num which can be used instead of hardcoded value and check that the query works in a database.</br> Hint: most probably just raplacing 4 with @Num will not work</br></br>Please provide the whole query as the answer.
+|Can we use a subquery in order to assign an initial value to the variable just in DECLARE statement? Please check in DB|?????Yes/No
+|What function can be used in case if you want to show some text output in the "Messages" tab of the script output window?|
+|How can you suppress the default message about how much rows have been affected by the query in the "Messages" tab of the script output window? ![](documetation_resources/p001.png)
+|Look at the query and it's output at the screenshot below.</br></br>How do you think, what will happen if we'll try to assign the output of this query to a single variable of type int as in the script below?</br></br>DECLARE @test AS INT</br></br>SELECT TOP 3 @test = BusinessEntityID</br>FROM HumanResources.Employee</br>ORDER BY BusinessEntityID DES</br>![](documetation_resources/p002.png)|?????</br> Error appears - the script is invalid to be run</br>It will assign the value 290 to the variable</br>It will assign the value 288 to the variable
+|At the previous work #6 we've created a Stored Procedure which returns some select output - you can double check it on https://docs.google.com/forms/d/1Fzqykk-BZvS1I3X417xWtGRzO4Z1L4DuN-PkleCLCdE/ </br></br>Now, please create a new one proc which actually soes the same but in another format:</br></br>- takes as a parameter @countNumber;</br>- returns you as output parameter the set of ProductId values in a single concatenated string - values should be separated by comma for the products that appear in ProductListPriceHistory table @countNumber times</br>- returns you as output parameter the number of rows affected</br></br>These two output parameters must be accessable outside of SP after it's invocation</br>Please see the example at the screenshot below: ![](documetation_resources\p003.png)
+
+
+
+
+
+
+
