@@ -22,7 +22,7 @@
 | ------------- | -------------                      |-------------|-------------|
 | AMS           | [Theory   ](year_2/AMS/README.md)  |[Labs ](year_2/AMS/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/AMS/Labs/Model_raport.docx)|
 |BD | [ Labs theory](year_2/BD/README.md) |||
-|GC ||[Labs](year_2/GC) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/GC/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
+|GC ||[Labs](year_2/GC/Labs) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/GC/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
 |POO ||[Labs](year_2/POO)|| 
 
 
