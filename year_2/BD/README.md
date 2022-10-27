@@ -22,51 +22,41 @@ Chisinau 2022
 </p>
 
 </br></br>
-<p align=right>  
-c.AMS | FCIM UTM Spring 2022 | 104 | 21.09.2021
-</p>
 
-c. BD | Galcenco | 104 | 09.09.2022
+
+---
 
 -- Intro Database –
-1. What is database purpose? – Store and manage data.
-2. When did the Database concepts born? - Thousands of year ago, the Egyptians first ( store and preserve date, curve it into stone).
-3. How the data gets generated? - We generate manual data, or automatically.
-4. Who consumes the data? - Applications (software) or/and people.
-5. What for is data being consumed? - Apps/Users
-6. Databases are used to....  - apps ( efficiently store data and return it when requested)
-7. What is DBMS? - Database Management Systems
-8. What is the SQL? - Structured Query Language
-9. What are the data use cases (1.. 2.. 3.. ) - directly and indirectly, 1) writing and executing queries against data in database, 2)executing searches, or submit/save button, generating a sequence statement to retrieve that date, 3)business/organizations
-10. Which "hats" you wear when working with data? - backend dev, data analysis, scientist, engineer, data researcher
-11. Since when the SQL is around here? (19..) – 1974
+
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+|1. What is database purpose? | Store and manage data.|
+|2. When did the Database concepts born? | Thousands of year ago, the Egyptians first ( store and preserve date, curve it into stone).|
+|3. How the data gets generated? | We generate manual data, or automatically.|
+|4. Who consumes the data? | Applications (software) or/and people.
+|5. What for is data being consumed? | Apps/Users|
+|6. Databases are used to....  | apps ( efficiently store data and return it when requested)|
+|7. What is DBMS? | Database Management Systems|
+|8. What is the SQL? | Structured Query Language|
+|9. What are the data use cases (1.. 2.. 3.. ) | directly and indirectly, 1) writing and executing queries against data in database, 2)executing searches, or submit/save button, generating a sequence statement to retrieve that date, 3)business/organizations|
+|10. Which "hats" you wear when working with data? | backend dev, data analysis, scientist, engineer, data researcher|
+|11. Since when the SQL is around here? (19..) | 1974|
 
 
 
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+|1. In what order do records appear when executing a SQL query without ORDER BY clause? | no particular order, in order they were added to database
+|2. What is the default order for ORDER BY clause? | ASC
+|3. Can fields which were not mentioned in the SELECT list be used in the ORDER BY clause? | Yes
+|4. Can fields which were not mentioned in the SELECT list be used in the ORDER BY clause? | Yes
+|5.as in example, the "top" instruction shows only x mentioned enteties, the "with ties" allow to show more if some of them have the same data|
+|6. Can WHERE clause be applied after ORDER BY clause?| No
+|7. Will "ID BETWEEN 10 AND 100" statement  return records with ID equal to 10 or 100? | Yes
+|8. Is filtering by text data case sensitive? E.g. WHERE Name = 'Ion' |Case insensitive
+|9. List the wildcards you've learned and explain their functionality | [ % ]	Represents zero or more characters	</br>[ _ ]	Represents a single character	</br>[ [] ]	Represents any single character within the brackets	</br>[ ^ ]	Represents any character not in the brackets</br> [ - ]	Represents any single character within the specified range	
+|10. What is the default masks for Date formats in MS SQL? (choose 2 out of 4) |'MM/DD/YYYY'
 
-
-1. In what order do records appear when executing a SQL query without ORDER BY clause? - no particular order, in order they were added to database
-2. What is the default order for ORDER BY clause? - ASC
-3. Can fields which were not mentioned in the SELECT list be used in the ORDER BY clause? - Yes
-4. Can fields which were not mentioned in the SELECT list be used in the ORDER BY clause? - Yes
-
-5.     as in example, the "top" instruction shows only x mentioned enteties, the "with ties" allow to show more if some of them have the same data
-6. Can WHERE clause be applied after ORDER BY clause?
-No
-7. Will "ID BETWEEN 10 AND 100" statement  return records with ID equal to 10 or 100?
-Yes
-
-8. Is filtering by text data case sensitive? E.g. WHERE Name = 'Ion'
-Case insensitive
-9. List the wildcards you've learned and explain their functionality
-%	Represents zero or more characters	
-_	Represents a single character	
-[]	Represents any single character within the brackets	
-^	Represents any character not in the brackets	
--	Represents any single character within the specified range	
-
-10. What is the default masks for Date formats in MS SQL? (choose 2 out of 4)
-'MM/DD/YYYY'
 
 </br></br>
 
@@ -74,30 +64,20 @@ _	Represents a single character
 <h2 align="center">(Functions in queries)</h2> 
 <p align="center"> https://www.youtube.com/watch?v=Fm8od9L9HMg</p></br>
 
-- Each and every function in MS SQL requires at least 1 parameter
-<p align="center" style="color:#0066ff">False</p>
-
-- What will be the correct version of get current date function call?
-<p align="center" style="color:#0066ff">SELECT GETDATE()</p>
-
-- Can a result of one function be used as a parameter of another function?
-<p align="center" style="color:#0066ff">Yes</p>
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+| Each and every function in MS SQL requires at least 1 parameter |False
+| What will be the correct version of get current date function call? | SELECT GETDATE()
+|Can a result of one function be used as a parameter of another function? | Yes
 
 <h2 align="center">(Text calculations)</h2> 
 <p align="center">https://www.youtube.com/watch?v=HJKraiIoYPU</p></br>
 
-
-- What is (are) the correct syntax of concatenate function in MS SQL?
-<p align="center" style="color:#0066ff">
-+ and 
-CONCAT()</p>
-
-- Do CAST() and CONVERT() functions behave similarly in MS SQL?
-<p align="center" style="color:#0066ff">Yes
-No</p>
-
-- You have a table:
-
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+|What is (are) the correct syntax of concatenate function in MS SQL? | [+] and [CONCAT()]
+|Do CAST() and CONVERT() functions behave similarly in MS SQL? | (not answered)variants: Yes/No
+|You have a table: </br>
 <div style="color:#505050">&nbsp;&nbsp;&nbsp;SELECT ActorName</br>
 &nbsp;&nbsp;&nbsp;FROM (</br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SELECT 'Tom BigBoy Cruise' as ActorName</br>
