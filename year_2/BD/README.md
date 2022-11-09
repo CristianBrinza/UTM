@@ -274,9 +274,42 @@ Output Parameters & Return Values</h2>
 |Look at the query and it's output at the screenshot below.</br></br>How do you think, what will happen if we'll try to assign the output of this query to a single variable of type int as in the script below?</br></br>DECLARE @test AS INT</br></br>SELECT TOP 3 @test = BusinessEntityID</br>FROM HumanResources.Employee</br>ORDER BY BusinessEntityID DES</br>![](documetation_resources/p002.png)|?????</br> Error appears - the script is invalid to be run</br>It will assign the value 290 to the variable</br>It will assign the value 288 to the variable
 |At the previous work #6 we've created a Stored Procedure which returns some select output - you can double check it on https://docs.google.com/forms/d/1Fzqykk-BZvS1I3X417xWtGRzO4Z1L4DuN-PkleCLCdE/ </br></br>Now, please create a new one proc which actually soes the same but in another format:</br></br>- takes as a parameter @countNumber;</br>- returns you as output parameter the set of ProductId values in a single concatenated string - values should be separated by comma for the products that appear in ProductListPriceHistory table @countNumber times</br>- returns you as output parameter the number of rows affected</br></br>These two output parameters must be accessable outside of SP after it's invocation</br>Please see the example at the screenshot below: ![](documetation_resources\p003.png)
 
+</br></br>
+# Laboratory work #7 
+<h2 align="center">(CTEs)</h2> 
+<p align="center"> https://www.youtube.com/watch?v=U0wXjUi2v_U</p></>
+<h2 align="center">(Cursors)</h2> 
+<p align="center"> https://www.youtube.com/watch?v=RHRjLd0bEaQ</p></>
 
 
+|  <div style="width:290px">Questions</div>      | Answers |
+| -------------  | --- |
+|Check the following CTE list. Is it a valid one? If no, whatshould we change to make it work?</br></br>WITH TABLE1 AS (</br>SELECT Name, Surname</br>FROM SomeTable</br>WHERE Name LIKE'A%'</br>),</br>TABLE2 AS (</br>SELECT *</br>FROM TABLE1</br>JOIN TABLE3 0N TABLE1.SURNAME = TABLE3.SURNAME</br>),</br>TABLE3 AS (</br>SELECT Name, Surname</br>FROM TABLE2</br>WHERE Name LIKE 'B%'</br>)</br>SELECT *</br>FROM TABLE2;|
+|Run the following DDL statement as a prerequisite:
 
 
+CREATE TABLE EmployeeJournal
+(NationalIDNumber NVARCHAR(MAX) NOT NULL,
+JobTitle NVARCHAR(MAX) NOT NULL,
+BirthDate date NOT NULL,
+AnniversaryFlag NVARCHAR(1) NOT NULL,
+FirstName NVARCHAR(MAX) NOT NULL,
+LastName NVARCHAR(MAX) NOT NULL,
+ThreadNumber INT NOT NULL,
+EntryDatetime DATETIME2(7) NOT NULL);
 
 
+Create a Stored Proc called InsertJournal() which takes as a perameter BusinessEntityId value.
+It should check HumanResources.Employee and Person.Person tables for a particular BusinessEntityId and insert a new row into InsertJournal table (created in prerequisite step).
+
+NationalIDNumber, JobTitle and BirthDate should be taken as is from Employee table.
+
+FirstName, LastName should be taken as is from Person table.
+
+AnniversaryFlag field should be calculated by proc "on the fly" - in case if the difference between the current year and the year from the BirthDate is a multiple of ten - then the AnniversaryFlag should be 'Y'; otherwise - 'N'.
+
+ThreadNumber - is the value calculated by function "getThreadNumber" which we've implemented in work #8 - the second parameter (aka maximum number of threads) should be 5
+ 
+EntryDatetime - is simply current timestamp which can be obtained via SYSDATETIME() function.
+
+Then, once the proc is ready, you should go row by row through Employee table (USING CURSOR!) for the records where JobTitle starts with 'Production%' and for each BusinessEntityId invoke InsertJournal() proc.

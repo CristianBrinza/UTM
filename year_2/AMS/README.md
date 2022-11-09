@@ -333,4 +333,90 @@ Pentru diagrama de secvenţă sunt următoarele stereotipuri de mesaje:
 Dacă parametrii lipsesc atunci parantezele rămîn neapărat după numele operaţiei.
 <p  align=center ><img align='center' style="height: 30%;
   width: 30%; " src=documetation_resources/p016.png /></p>
-<b></b>
+
+</br></br></br></br>
+
+---
+
+<h1 align=center>Dupa Midterm 1 </h1>
+---
+lectie absentata, va fi adaugata ulterior (diagrama de clasa)
+---
+
+
+</br></br></br>
+<h1 align=center>Diagrama de stari (statechart diagram) </h1>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Această diagramă este folosită pentru descrierea consecutivităţilor de stări posibile şi trecerilor, care în ansamblu caracterizează comportamentul elementelor modelului în timpul ciclului de viaţă. Diagrama de stări reprezintă comportamentul dinamic a entităţilor în baza specificaţiei reacţiei lor la perceperea căror-va evenimente concrete
+</br></br>
+<h2><b>Automate </b></h2>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Un automat (state machine) în limbajul UML reprezintă o formalizare pentru modelarea comportamentului elementelor modelului şi a sistemului întreg
+
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p027.png /></p>
+</br>
+<h2><b>Stare  </b></h2>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metaclasă abstractă, ce se utilizează pentru modelarea situaţiei aparte, pe parcursul cărei este prezentă executarea anumitei condiţii.
+Starea (state) poate fi în formă de valori concrete a atributului clasei sau obiectului, în acest caz modificarea anumitelor valorilor va respinge modificarea clasei modelate sau obiectului.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trebuie de menţinut că nu fiecare atribut al clasei poate caracteriza starea lui. 
+<p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p028.png /></p>
+</br>
+
+- <b>Numele stării </b> reprezintă aliniat de text, care dezvăluie sensul stării date. Numele este întodeauna scris cu litera majusculă. Deoarece starea sistemului este partea compusă a procesului de funcţionare, este recomandat de folosit în calitate de nume verbele în timpul prezent (sună, tipăreşte, aşteaptă) sau participiu corespunzător (ocupat, liber).
+- <b>Numele stării </b>  poate lipsi, adică el nu este obligatoriu pentru anumite stări. În acest caz starea este <b>anonimă </b>  şi dacă în diagrama de stări sunt cîteva din ele, atunci ele toate trebuie să fie diferite între ele.
+</br> </br>
+1) <b>Starea iniţială  </b> (mai sus cu o linie)
+
+2) <b>Starea iniţială  </b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reprezintă un caz particular de stare, care nu conţine nici o acţiune internă (pseudostare). 
+În acest caz există iniţial un obiect în starea iniţială a timpului. Ea este utilizată pentru indicarea pe diagrama de stări a spaţiului grafic, de la care începe procesul de modificare a stărilor. 
+
+ <p  align=center ><img align='center' style="height: 30%;
+  width: 30%; " src=documetation_resources/p029.png /></p>
+</br>
+
+La cel mai înalt nivel de reprezentare a obiectului trecerea de la starea iniţială la starea finală poate fi marcată ca acţiunea de creare (iniţializare) a obiectului dat. În cazul contrar tranziţia nu esre marcată deloc. Dacă acestă tranziţie nu este marcata, atunci ea este prima trecere în starea următoare.
+</br></br>
+
+3) <b> Starea finală </b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reprezintă un caz particular al stării, care nu conţine nici o acţiune internă (pseudostare). În această stare obiectul se v-a afla în starea iniţială după finisarea lucrului automatului în ultimul moment de timp. El este utilizat pentru indicarea spaţiului grafic pe diagrama de stări, unde se sfîrşeşte procesul de schimbare a stării sau ciclului de viaţă a obiectului dat. Grafic starea finală în limbajul UML este reprezentată în formă de cerc haşurat deplasat în circumferinţă , în care poate intra numai săgeata corespunzătoare cu trecerea.
+
+</br>
+<h2><b>Tranziţie</b> </h2>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O simplă tranziţie reprezintă o relaţie între două stări consecutive indicînd faptul schimbării a unei stări cu altă. Prezenţa obiectului modelat în prima stare va efectua anumite acţiuni, dar trecerea în starea a doua  va fi atunci cînd anumite acţiuni vor fi terminate şi după îndeplinirea anumitor condiţii adăugătoare. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tranziţia începe cînd un anumit eveniment se petrece: terminarea executării acţiunii (do activity), trimiterea mesajului sau emiterea semnalului. În trecere se indică numele acţiunii. Mai mult, în tranziţie poate fi indicată acţiunea produsă de un obiect ca reacţia tranziţiei de la o stare la alta.
+
+Executarea tranziţiei poate depinde nu numai de petrecerea unui anumit eveniment, dar şi de la îndeplinirea condiţiei corespunzătoare, care se numeşte condiţie gardă. Obiectul va trece de la o stare la alta, numai în caz dacă a fost acţiunea indicată şi condiţia de gardă este «adevărată».
+
+</br>
+
+Tranziţia este reprezentată ca linie întreagă cu săgeată, care este îndreptată în starea de ţintă. Fiecare tranziţie poate fi marcată cu aliniat de text, care are următorul format general:
+
+- < signatura evenimentului >'['<condiţia de pază>']' <exprimarea acţiunii>.
+
+Signatura acţiunii descrie un anumit eveniment cu argumentele necesare:
+
+- < numele evenimentului >'('<lista parametrilor împărţite cu virgule>')'. 
+
+<b>!!!</b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ce este "Tranzitie trigger" ? - ce contine eveniment</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ce contine "Tranzitie trigger" ? - eveniment -> conditia garda -> ex. actiune
+
+<b>!!!</b>
+</br>
+
+
+
+
+
