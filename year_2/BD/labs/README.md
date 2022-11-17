@@ -284,7 +284,7 @@ Output Parameters & Return Values</h2>
 
 |  <div style="width:290px">Questions</div>      | Answers |
 | -------------  | --- |
-|Check the following CTE list. Is it a valid one? If no, whatshould we change to make it work?</br></br>WITH TABLE1 AS (</br>SELECT Name, Surname</br>FROM SomeTable</br>WHERE Name LIKE'A%'</br>),</br>TABLE2 AS (</br>SELECT *</br>FROM TABLE1</br>JOIN TABLE3 0N TABLE1.SURNAME = TABLE3.SURNAME</br>),</br>TABLE3 AS (</br>SELECT Name, Surname</br>FROM TABLE2</br>WHERE Name LIKE 'B%'</br>)</br>SELECT *</br>FROM TABLE2;|
+|Check the following CTE list. Is it a valid one? If no, whatshould we change to make it work?</br></br>WITH TABLE1 AS (</br>SELECT Name, Surname</br>FROM SomeTable</br>WHERE Name LIKE'A%'</br>),</br>TABLE2 AS (</br>SELECT *</br>FROM TABLE1</br>JOIN TABLE3 0N TABLE1.SURNAME = TABLE3.SURNAME</br>),</br>TABLE3 AS (</br>SELECT Name, Surname</br>FROM TABLE2</br>WHERE Name LIKE 'B%'</br>)</br>SELECT *</br>FROM TABLE2;|The CTE, we can’t use the select statement if we did not created the table, as in line 8 table3 was not initialized…,also… The “0N TABLE1.S….” in “o”, because it’s a misstype |
 |Run the following DDL statement as a prerequisite:
 
 
