@@ -27,6 +27,8 @@ Chisinau 2022
 
 </br></br></br>
 
+<p align="right">DB | Boris Galcenco | 17.11.2022</p>
+</br>
 
 # General DB design principles
 
@@ -87,11 +89,11 @@ Options:
 </table> 
 
 ---
-</br></br>
-## Data Analise & research
+
+## Data Analysis & research
 
 
-0.
+0. THe GOAL / purpose 
 1. Black box
 2. Simplify (define Objects)
 3. Decomposition in Siple Objects
@@ -99,4 +101,33 @@ Options:
     - atributes
     - funcions
     - propreties 
+
+
+---
+exemple of individual work to present
+
+## "Eyelashes" Data analysis
+
+
+REPORT:
+- Term
+   - Eyelashes
+- Dimensions
+  - brush
+  - container
+  - content
+- Final fact
+    - depends on revews
+    - depends on aspect
+    - depends on quality
+- Analize & exemple
+  - place to sell (targhet audience location and places of intresets)
+  - ingredients (statistics)
+  - sizes & shapes (feedback)
+  
+---
+
+
+
+
 
