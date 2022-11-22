@@ -31,4 +31,25 @@ Chisinau 2022
 
 # PBL
 
+photos
 
+--- 
+## Individual work:
+1. problem : 
+    - independence / pricacy / money / personal life / dependency /EQ
+2. Goal + KPI : 
+    - living independent by 22 (age)
+    - developemnt of logistics
+    - KPI: 
+      - independent budget
+      - 
+3. Decomposition:
+    - job
+    - researches : job+requirements 
+    - MVP:
+      - make budget 
+4. TO DO - Plan (Schedule)
+    - search apartament with afordable prices and infrastructure for future
+    - calculate aproximate spendings for mentenace
+
+--- 
