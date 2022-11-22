@@ -13,18 +13,39 @@
 
 --------------- 
 
-# Anul I </br>
-# Anul II (2022-2023)</br>
+</br></br>
+<h1 align="center" >Anul I (2021-2022)</h1>
+
+## Semeter I
+
+| Discipline  | Theory | Laboratories | Templates|
+| ------------- | -------------                      |-------------|-------------|
 
 
+
+## Semeter II
+| Discipline  | Theory | Laboratories | Templates|
+| ------------- | -------------                      |-------------|-------------|
+
+</br></br>
+<h1 align="center" >Anul II (2022-2023)</h1>
+
+
+## Semeter I
 
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
 | AMS           | [Theory   ](year_2/AMS/README.md)  |[Labs ](year_2/AMS/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/AMS/Labs/Model_raport.docx)|
-|BD | [ Labs theory](year_2/BD/README.md) |||
+|BD |[ Theory](year_2/BD/theory)| [ Labs](year_2/BD/labs) |||
 |GC ||[Labs](year_2/GC/Labs) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/GC/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
 |POO ||[Labs](year_2/POO)|| 
+|BDA |[Theory](year_2/BDA)|| 
 
 
+</br>
+
+## Semeter II
+| Discipline  | Theory | Laboratories | Templates|
+| ------------- | -------------                      |-------------|-------------|
 </br></br>
 <h1 align='center'><i>Stay awesome!</i></h1>

@@ -131,3 +131,6 @@ REPORT:
 
 
 
+identify problem -> ... -> ... -> goal result
+
+... - steps , for every single step u need to ask questions, and research
