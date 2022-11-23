@@ -18,10 +18,17 @@
 
 ## Semeter I
 
-| Discipline  | Theory | Laboratories | Templates|
+| Discipline  | Theory | Laboratories | Additional|
 | ------------- | -------------                      |-------------|-------------|
+|MD|[HW](year1/md)||   [Steward 7E]()
+|PSA|[HW](year1/psa)
+|PC||[Labs](year1/pc)|[Labs solutions](https://cf-problemset.herokuapp.com/)
 
+| Object  | Resources |
+| ------------- | -------------                      
+|Steward 7E solution | [link 1](https://www.studocu.com/row/document/danshgah-snaati-amirkbir/linear-algebra/solution-manual-for-linear-algebra-and-its-applications-5th-edition-by-lay/7179596) , [quizlet link](https://quizlet.com/explanations/textbook-solutions/calculus-early-transcendentals-7th-edition-9780538497909)(subscription needed)
 
+</br>
 
 ## Semeter II
 | Discipline  | Theory | Laboratories | Templates|
@@ -35,11 +42,11 @@
 
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
-| AMS           | [Theory   ](year_2/AMS/README.md)  |[Labs ](year_2/AMS/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/AMS/Labs/Model_raport.docx)|
-|BD |[ Theory](year_2/BD/theory)| [ Labs](year_2/BD/labs) |||
-|GC ||[Labs](year_2/GC/Labs) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year_2/GC/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
-|POO ||[Labs](year_2/POO)|| 
-|BDA |[Theory](year_2/BDA)|| 
+| AMS           | [Theory   ](year2/ams/README.md)  |[Labs ](year2/ams/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year2/ams/Labs/Model_raport.docx)|
+|BD |[ Theory](year2/bd/theory)| [ Labs](year2/bd/labs) |||
+|GC ||[Labs](year2/gc/Labs) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year2/gc/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
+|POO ||[Labs](year2/POO)|| 
+|BDA |[Theory](year2/bda)|| 
 
 
 </br>
