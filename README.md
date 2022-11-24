@@ -11,9 +11,12 @@
 <h4 align="center">Technical University of Moldova  </h4>
 <h4 align="center">FAF    |   FCIM   |   UTM   </h4> </br>
 
+<p align="center">Feel free to fork, change, or improve in any way this repository... lets help our colleagues have a easier and more enjoyable live in University</p>
+
 --------------- 
 
 </br></br>
+
 <h1 align="center" >Anul I (2021-2022)</h1>
 
 ## Semeter I
@@ -26,7 +29,7 @@
 
 | Object  | Resources |
 | ------------- | -------------                      
-|Steward 7E solution | [link 1](https://www.studocu.com/row/document/danshgah-snaati-amirkbir/linear-algebra/solution-manual-for-linear-algebra-and-its-applications-5th-edition-by-lay/7179596) , [quizlet link](https://quizlet.com/explanations/textbook-solutions/calculus-early-transcendentals-7th-edition-9780538497909)(subscription needed)
+|Steward 7E solution | [Answerers link 1](https://www.studocu.com/row/document/danshgah-snaati-amirkbir/linear-algebra/solution-manual-for-linear-algebra-and-its-applications-5th-edition-by-lay/7179596) </br> [quizlet link](https://quizlet.com/explanations/textbook-solutions/calculus-early-transcendentals-7th-edition-9780538497909) ( subscription needed )
 
 </br>
 
@@ -42,7 +45,7 @@
 
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
-| AMS           | [Theory   ](year2/ams/README.md)  |[Labs ](year2/ams/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year2/ams/Labs/Model_raport.docx)|
+| AMS           | [Theory (RO)  ](year2/ams/README.md)  |[Labs ](year2/ams/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year2/ams/Labs/Model_raport.docx)|
 |BD |[ Theory](year2/bd/theory)| [ Labs](year2/bd/labs) |||
 |GC ||[Labs](year2/gc/Labs) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year2/gc/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
 |POO ||[Labs](year2/POO)|| 
@@ -56,3 +59,4 @@
 | ------------- | -------------                      |-------------|-------------|
 </br></br>
 <h1 align='center'><i>Stay awesome!</i></h1>
+

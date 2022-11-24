@@ -1,9 +1,7 @@
 <h4 align="center">FCIM UTM </h4>
 <h1 align='center'> 
-
-
-░▒▄█▀▄░▒▐██▄▒▄██▌▒▄█▀▀█ 
-▒▐█▄▄▐█░▒█░▒█░▒█░▒▀▀█▄▄ 
+░▒▄█▀▄░▒▐██▄▒▄██▌▒▄█▀▀█ </br>
+▒▐█▄▄▐█░▒█░▒█░▒█░▒▀▀█▄▄ </br>
 ▒▐█░▒▐█▒▐█░░░░▒█▌▒█▄▄█▀
 </h1>
 <h4 align="center">Technical University of Moldova  </h4>
