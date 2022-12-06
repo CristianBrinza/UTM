@@ -1,14 +1,12 @@
-package Lab4.src;
+package src;
 
 public abstract class Root {
     public static int objectsCount;
-    protected int id;
+
+    public int id;
 
     public int generateId() {
-        return (int) ((Math.random() * (99999 - 10000)) + 10000);
+        return (int) ((Math.random() * (9999 - 1000)) + 1000);
     }
 
-    public int getId() {
-        return this.id;
-    }
 }

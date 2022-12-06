@@ -132,3 +132,75 @@ REPORT:
 identify problem -> ... -> ... -> goal result
 
 ... - steps , for every single step u need to ask questions, and research
+
+
+
+---
+---
+---
+
+Midterm
+
+Eyelashes
+
+
+---
+Dimensions
+*
+Example
+Maretial: Mat_ID, Description
+Liquid Type: LiqType_ID, Description
+DesignType: Design_ID,Description
+..............
+BodyMartial: BodyMat_ID, Description
+Brush Type: BrushType_ID, Description
+Color: Color_ID, Description
+Content: Content_ID, Description (the eyelash substance)
+DesignType: Design_ID,Description
+
+---
+Final Fact Table
+
+Bottle_Types
+
+Field                 Type / Func
+Bottle_ID          PK
+Mat_ID             FK
+LiqType_ID      FK
+Design_ID        FK
+Volume            INT
+Size_W             INT
+Size_H              INT
+DateFirstProduced Date
+DateLastProduced Date
+..............
+Field                 Type / Func
+Eylash_ID          PK
+BrushType_ID   FK
+BodyMat_ID      FK
+Color_ID            FK
+Content_ID       FK
+Design_ID         FK
+Volume            INT
+Size_X              INT
+Size_Y              INT
+Size_Z              INT
+DateFirstProduced Date
+DateLastProduced Date
+Eylash_price    INT
+
+---
+Analysis type which could be performed
+
+Most often liquid
+Most often design
+Most popular volume
+Most popular size
+Bottle life-cycle
+..............
+*most often size, color, and 
+* depends on reviews, aspects,  quality, and brand popularity
+* Analyze & examples (in parenthesis is the type)
+  - place to sell (target audience location and places of interest)
+  - ingredients (statistics)
+  - sizes & shapes (feedback)
