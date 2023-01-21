@@ -367,9 +367,9 @@ Starea (state) poate fi în formă de valori concrete a atributului clasei sau o
 - <b>Numele stării </b> reprezintă aliniat de text, care dezvăluie sensul stării date. Numele este întodeauna scris cu litera majusculă. Deoarece starea sistemului este partea compusă a procesului de funcţionare, este recomandat de folosit în calitate de nume verbele în timpul prezent (sună, tipăreşte, aşteaptă) sau participiu corespunzător (ocupat, liber).
 - <b>Numele stării </b>  poate lipsi, adică el nu este obligatoriu pentru anumite stări. În acest caz starea este <b>anonimă </b>  şi dacă în diagrama de stări sunt cîteva din ele, atunci ele toate trebuie să fie diferite între ele.
 </br> </br>
-1) <b>Starea iniţială  </b> (mai sus cu o linie)
+ 
 
-2) <b>Starea iniţială  </b>
+1) <b>Starea iniţială  </b>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reprezintă un caz particular de stare, care nu conţine nici o acţiune internă (pseudostare). 
 În acest caz există iniţial un obiect în starea iniţială a timpului. Ea este utilizată pentru indicarea pe diagrama de stări a spaţiului grafic, de la care începe procesul de modificare a stărilor. 
@@ -381,7 +381,7 @@ Starea (state) poate fi în formă de valori concrete a atributului clasei sau o
 La cel mai înalt nivel de reprezentare a obiectului trecerea de la starea iniţială la starea finală poate fi marcată ca acţiunea de creare (iniţializare) a obiectului dat. În cazul contrar tranziţia nu esre marcată deloc. Dacă acestă tranziţie nu este marcata, atunci ea este prima trecere în starea următoare.
 </br></br>
 
-3) <b> Starea finală </b>
+2) <b> Starea finală </b>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reprezintă un caz particular al stării, care nu conţine nici o acţiune internă (pseudostare). În această stare obiectul se v-a afla în starea iniţială după finisarea lucrului automatului în ultimul moment de timp. El este utilizat pentru indicarea spaţiului grafic pe diagrama de stări, unde se sfîrşeşte procesul de schimbare a stării sau ciclului de viaţă a obiectului dat. Grafic starea finală în limbajul UML este reprezentată în formă de cerc haşurat deplasat în circumferinţă , în care poate intra numai săgeata corespunzătoare cu trecerea.
 
