@@ -628,13 +628,13 @@ FROM HumanResources.Employee;
   </tr>
   <tr>
     <td>What function can be used in case if you want to show some text output in the "Messages" tab of the script output window?</td>
-    <td></td>
+    <td>The RAISERROR function can be used to display a custom error message in the "Messages" tab of the script output window in SQL.</td>
   </tr>
   <tr>
     <td>How can you suppress the default message about how much rows have been affected by the query in the "Messages" tab of the script output window?
     <p  align=center ><img align='center' src=./documetation_resources/p001.png /></p> 
     </td>
-    <td></td>
+    <td>To suppress the default message about rows affected in the "Messages" tab of the script output window, you can use the "SET NOCOUNT ON" command in your SQL query.</td>
   </tr>
   <tr>
     <td>Look at the query and it's output at the screenshot below.
@@ -651,7 +651,7 @@ ORDER BY BusinessEntityID DESC
 <br>
 <p  align=center ><img align='center' src=./documetation_resources/p002.png /></p> 
 </td>
-    <td></td>
+    <td>It will assign the value 288 to the variable.</td>
   </tr>
   <tr>
     <td>At the previous work #6 we've created a Stored Procedure which returns some select output - you can double check it on https://docs.google.com/forms/d/1Fzqykk-BZvS1I3X417xWtGRzO4Z1L4DuN-PkleCLCdE/ 
@@ -667,7 +667,41 @@ These two output parameters must be accessable outside of SP after it's invocati
 <br><br>
 Please see the example at the screenshot below:
 <p  align=center ><img align='center' src=./documetation_resources/p003.png /></p> </td>
-    <td></td>
+    <td>
+    
+``` sql 
+CREATE PROCEDURE GetProductIds (@countNumber INT, @outputString VARCHAR(MAX) OUTPUT, @rowsAffected INT OUTPUT)
+AS
+BEGIN
+    SELECT @outputString = COALESCE(@outputString + ',', '') + CAST(ProductId AS VARCHAR(10))
+    FROM (
+        SELECT ProductId, COUNT(*) as frequency
+        FROM [Production].[ProductListPriceHistory]
+        GROUP BY ProductId
+        HAVING COUNT(*) >= @countNumber
+    ) t
+    
+    SELECT @rowsAffected = COUNT(*)
+    FROM (
+        SELECT ProductId, COUNT(*) as frequency
+        FROM [Production].[ProductListPriceHistory]
+        GROUP BY ProductId
+        HAVING COUNT(*) >= @countNumber
+    ) t
+END
+```
+
+You can then call the stored procedure and access the output parameters as follows:
+
+```sql
+DECLARE @outputString VARCHAR(MAX), @rowsAffected INT
+EXEC GetProductIds @countNumber = 2, @outputString = @outputString OUTPUT, @rowsAffected = @rowsAffected OUTPUT
+PRINT @outputString
+PRINT @rowsAffected
+
+```
+
+</td>
   </tr>
   </table>
 
@@ -701,7 +735,28 @@ Please<b>provide the whole CREATE FUNCTION</b> statement as the answer.<br>
 <p  align=center ><img align='center' src=./documetation_resources/p006.png /></p> 
   
 </td>
-    <td></td>
+    <td>
+    
+```sql
+CREATE OR ALTER FUNCTION dbo.getPbDate
+(
+@date AS DATETIME
+)
+RETURNS DATETIME
+AS
+BEGIN
+RETURN
+CASE
+WHEN DATENAME(WEEKDAY, @date) = 'Friday'
+THEN CAST(DATEADD(day, -3, CAST(@date AS date)) AS DATETIME)
+WHEN DATENAME(WEEKDAY, @date) = 'Sunday'
+THEN CAST(DATEADD(day, -2, CAST(@date AS date)) AS DATETIME)
+ELSE CAST(DATEADD(day, -1, CAST(@date AS date)) AS DATETIME)
+END
+END
+```
+
+</td>
   </tr>
    <tr>
     <td>Let's take a look at the<b> HumanResources.Employee<./b> table in AdventureWorks2019 Database: it contains 290 records; each of them has it's own BusinessEntityID which is unique ID value starting from 1 to 290.
@@ -711,10 +766,26 @@ Let's assume that there's a Process which can be run in N parallel threads; each
 So you need to write a function called<b> getThreadNumber</b> which will take as an input parameters BusinessEntityID field and N - number of parallel threads, and will return the ID of thread assigned for each particular row.<br>
 <p  align=center ><img align='center' src=./documetation_resources/p007.png /></p> 
   </td>
-    <td></td>
+    <td>
+    
+``` sql
+CREATE OR ALTER FUNCTION dbo.getThreadNumber
+(
+@id AS INT,
+@n AS INT
+)
+RETURNS INT
+AS
+BEGIN
+RETURN @id % @n + 1
+END
+
+```
+
+</td>
   </tr> <tr>
     <td>What is the scope of visibility of the temporary table #Test?</td>
-    <td></td>
+    <td>Only connection to the database which created the table can access it</td>
   </tr>
    <tr>
     <td>Prerequisite: run the following query in the AdventureWorks2019 database connection script:<br>
@@ -732,7 +803,27 @@ Then using tables Person.Person, Person.EmailAddress and Person.PersonPhone, wri
 Please provide the whole query as the answer<br>
 <p  align=center ><img align='center' src=./documetation_resources/p008.png /></p> 
  </td>
-    <td></td>
+    <td>
+    
+``` sql
+SELECT
+A.BusinessEntityID,
+A.FirstName,
+B.EmailAddress,
+C.PhoneNumber
+INTO #TempTable
+FROM Person.Person AS A
+FULL JOIN Person.EmailAddress AS B
+ON B.BusinessEntityID = A.BusinessEntityID
+FULL JOIN Person.PersonPhone AS C
+ON C.BusinessEntityID = A.BusinessEntityID
+WHERE
+B.EmailAddress IS NULL
+OR C.PhoneNumber IS NULL
+SELECT * FROM #TempTable
+```
+
+</td>
   </tr>
  
   </table>
