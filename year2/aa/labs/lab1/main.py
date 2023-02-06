@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 # Import the NumPy library to use matrix power
 from numpy.linalg import matrix_power
+# Import the prettytable library to generate a table with responses
+from prettytable import PrettyTable
 
 sys.setrecursionlimit(10**6) # Fixing maximum recursion depth exceeded error
 
@@ -138,7 +140,8 @@ def fib_generator(n):
         a, b = b, a + b
 
 
-n_terms = 30 # Number of terms to calculate
+n_terms = 15 # Number of terms to calculate
+ns=[]
 recursive_time = []
 iterative_time = []
 loop_time = []
@@ -149,29 +152,43 @@ binet_time = []
 
 
 for i in range(n_terms):
+    ns.append(i+1)
+
+
     start_time = time.time()
+    result_recursive = fib_recursive(i)
     fib_recursive(i)
     recursive_time.append(time.time() - start_time)
+    time_recursive = time.time() - start_time
 
     start_time = time.time()
+    result_iterative = fib_iterative(i)
     fib_iterative(i)
     iterative_time.append(time.time() - start_time)
+    time_iterative = time.time() - start_time
 
     start_time = time.time()
+    result_loop = fib_loop(i)
     fib_loop(i)
     loop_time.append(time.time() - start_time)
 
     start_time = time.time()
+    result_formula = fib_formula(i)
     fib_formula(i)
     formula_time.append(time.time() - start_time)
 
     start_time = time.time()
+    result_matrix = fib_matrix(i)
     fib_matrix(i)
     matrix_time.append(time.time() - start_time)
 
     start_time = time.time()
+    result_binet = fib_binet(i)
     fib_binet(i)
     binet_time.append(time.time() - start_time)
+
+
+
 
 # Plotting the comparison graph
 plt.scatter(range(n_terms), recursive_time, label='Recursive')
@@ -185,3 +202,26 @@ plt.xlabel('Nth Term')
 plt.ylabel('Time (s)')
 plt.title('Fibonacci Sequence Calculation Time Comparison')
 plt.show()
+
+result_recursive= "%.1f" % result_recursive
+result_iterative= "%.1f" % result_iterative
+result_loop= "%.1f" % result_loop
+result_formula= "%.1f" % result_formula
+result_matrix= "%.1f" % result_matrix
+result_binet= "%.1f" % result_binet
+
+
+
+
+
+table = PrettyTable()
+table.field_names = ['Method', 'Result', str(ns)]
+table.add_row(['Recursive', result_recursive, recursive_time])
+table.add_row(['Iterative', result_iterative, iterative_time])
+table.add_row(['Loop', result_loop, loop_time])
+table.add_row(['Formula', result_formula, formula_time])
+table.add_row(['Matrix', result_matrix, matrix_time])
+table.add_row(['Binet', result_binet, binet_time])
+
+
+print(table)
