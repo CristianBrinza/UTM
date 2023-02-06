@@ -140,7 +140,7 @@ def fib_generator(n):
         a, b = b, a + b
 
 
-n_terms = 15 # Number of terms to calculate
+n_terms = 30 # Number of terms to calculate
 ns=[]
 recursive_time = []
 iterative_time = []
@@ -191,12 +191,12 @@ for i in range(n_terms):
 
 
 # Plotting the comparison graph
-plt.scatter(range(n_terms), recursive_time, label='Recursive')
-plt.scatter(range(n_terms), iterative_time, label='Iterative')
-plt.scatter(range(n_terms), loop_time, label='Loop')
-plt.scatter(range(n_terms), formula_time, label='Formula')
-plt.scatter(range(n_terms), matrix_time, label='Matrix')
-plt.scatter(range(n_terms), binet_time, label='Binet')
+plt.plot(range(n_terms), recursive_time, label='Recursive')
+plt.plot(range(n_terms), iterative_time, label='Iterative')
+plt.plot(range(n_terms), loop_time, label='Loop')
+plt.plot(range(n_terms), formula_time, label='Formula')
+plt.plot(range(n_terms), matrix_time, label='Matrix')
+plt.plot(range(n_terms), binet_time, label='Binet')
 plt.legend()
 plt.xlabel('Nth Term')
 plt.ylabel('Time (s)')
