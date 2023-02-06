@@ -45,7 +45,7 @@
 
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
-| AMS           | [Theory (RO)  ](year2/ams/README.md)  |[Labs ](year2/ams/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year2/ams/Labs/Model_raport.docx)|
+| AMS           | [Theory (RO)  ](year2/ams)  |[Labs ](year2/ams/Labs)|[Template](https://github.com/CristianBrinza/UTM/raw/main/year2/ams/Labs/Model_raport.docx)|
 |BD |[ Theory](year2/bd/theory)| [ Labs](year2/bd/labs) |||
 |GC ||[Labs](year2/gc/Labs) | [Template](https://github.com/CristianBrinza/UTM/raw/main/year2/gc/Sablon%20-%20Raport%20pentru%20laboratoarele.docx)
 |POO ||[Labs](year2/POO)|| 
@@ -57,6 +57,8 @@
 ## Semeter II
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
+|BDA ||[Labs](year2/aa/labs/)|| 
+
 </br></br>
 <h1 align='center'><i>Stay awesome!</i></h1>
 
