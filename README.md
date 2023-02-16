@@ -59,6 +59,7 @@
 | ------------- | -------------                      |-------------|-------------|
 |AA |[Theory](year2/aa/)|[Labs](year2/aa/labs/)|| 
 |RC||[Labs](year2/rc/labs/)|
+|LFAF |[Theory](year2/lfaf/)|[Labs](year2/lfaf/labs/)|| 
 
 </br></br>
 <h1 align='center'><i>Stay awesome!</i></h1>
