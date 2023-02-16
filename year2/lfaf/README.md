@@ -212,7 +212,7 @@ right side of a production, in order from left to
 right, where the symbol represented by the
 parent is on the left-hand side.
 
-Example:
+<p align=center><i> Example:</i</p>
 
 <p align=center>                           
   <img align=center style="height: 30%;

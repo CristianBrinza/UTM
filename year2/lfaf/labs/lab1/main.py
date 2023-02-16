@@ -2,13 +2,20 @@
 # ▒█▄▄░█▀░█▀█░█▀  FAF-212 Cristian Brinza lab1
 
 
-def main() -> int:
-    # tests: 
-    # run_tests()
-  
-    # production: 
+from grammar import Grammar
+from finite_automaton import FiniteAutomaton
 
-    return 0
+if __name__ == '__main__':
+    g = Grammar()
+    print(g.generate_valid_strings(5))
 
+    fa = FiniteAutomaton(g)
+    print(fa.check_string('acd'))
+    print(fa.check_string('bdr'))
+    print(fa.check_string('ff'))
+    print(fa.check_string('bcdf'))
+    print(fa.check_string('abd'))
 
-main()
+# To run the tests, you can use the following command from the project root directory:
+#     python -m unittest discover -s tests
+
