@@ -8,7 +8,7 @@
 <h3 align="center" >Course: Formal Languages & Finite Automata</h3>
 <h1 align="center">Intro to formal languages. Regular grammars. Finite Automata.</h1>
 <h4 align="center">Technical University of Moldova  </h4>
-<h4 align="center">FCIM   |   UTM   |   Spring 2022</h4><br><br>
+<h4 align="center">FCIM   |   UTM   |   Spring 2023</h4><br><br>
 
 
 <p align=center>                           
@@ -21,7 +21,7 @@ p. Formal Languages and Finite Automata
 <p align=right>  
 lab. V. Drumea
 </p>
-<p align="right" > stundent FAF-212 Cristian Brinza</p>
+<p align="right" > student FAF-212 Cristian Brinza</p>
 </br><p align=center>  
 Chisinau 2023
 </p>
