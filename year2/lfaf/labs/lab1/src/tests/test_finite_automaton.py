@@ -1,5 +1,5 @@
-from grammar import Grammar
-from finite_automaton import FiniteAutomaton
+from src.grammar import Grammar
+from src.finite_automaton import FiniteAutomaton
 
 def test_check_string():
     g = Grammar()

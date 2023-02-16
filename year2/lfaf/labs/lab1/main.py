@@ -2,8 +2,8 @@
 # ▒█▄▄░█▀░█▀█░█▀  FAF-212 Cristian Brinza lab1
 
 
-from grammar import Grammar
-from finite_automaton import FiniteAutomaton
+from src.grammar import Grammar
+from src.finite_automaton import FiniteAutomaton
 
 if __name__ == '__main__':
     g = Grammar()
