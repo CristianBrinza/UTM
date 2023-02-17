@@ -1,14 +1,8 @@
-from typing import Set
+import random
 
 
 class Grammar:
-    def __init__(
-        self,
-        non_terminals: Set[str],
-        terminals: Set[str],
-        productions: dict,
-        start_symbol: str
-    ):
+    def __init__(self, non_terminals, terminals, productions, start_symbol):
         self.non_terminals = non_terminals
         self.terminals = terminals
         self.productions = productions
@@ -16,24 +10,30 @@ class Grammar:
 
     def generate_strings(self, n):
         valid_strings = set()
-        self.generate_strings_helper(self.start_symbol, '', n, valid_strings)
-        return list(valid_strings)[:n]
+        while len(valid_strings) < n:
+            string = self.generate_string(self.start_symbol)
+            if string is not None:
+                valid_strings.add(string)
+        return valid_strings
 
-    def generate_strings_helper(self, symbol, string, n, strings):
-        if symbol not in self.non_terminals:
-            string += symbol
-            strings.add(string)
-        elif n > 0:
-            for production in self.productions[symbol]:
-                for i in range(len(production)):
-                    self.generate_strings_helper(
-                        production[i],
-                        string + production[:i],
-                        n - 1,
-                        strings
-                    )
-                    if len(strings) == n:
-                        return
+    def generate_string(self, symbol):
+        if symbol in self.terminals:
+            return symbol
+        elif symbol in self.non_terminals:
+            possible_productions = list(self.productions.get(symbol, set()))
+            if not possible_productions:
+                return None
+            production = random.choice(possible_productions)
+            string = ''
+            for symbol in production:
+                generated = self.generate_string(symbol)
+                if generated is None:
+                    return None
+                string += generated
+            return string
+        else:
+            return None
 
     def __str__(self):
-        return f'Grammar with non-terminals: {self.non_terminals}, terminals: {self.terminals}, productions: {self.productions}, start symbol: {self.start_symbol}'
+        productions_str = "\n".join(f"{k} -> {' | '.join(v)}" for k, v in self.productions.items())
+        return f"G = (Vn = {self.non_terminals}, Vt = {self.terminals}, P = {productions_str}, S = {self.start_symbol})"
