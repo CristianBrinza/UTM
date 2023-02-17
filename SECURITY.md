@@ -8,4 +8,4 @@
 
 ## Reporting a Mistake / Vulnerability
 
-Thank you for yor conribution by reporting a Mistake / Vulnerability
+Thank you for yor contribution by reporting a Mistake / Vulnerability
