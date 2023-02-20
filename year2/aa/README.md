@@ -171,7 +171,7 @@ return m                  |    |
 ```
 
 <br>
-<h2 align="center">🏡 Pentru acasa: &nbsp;&nbsp;<i>solved</i> </h2>
+<h2 align="center">🏡 Pentru acasa: &nbsp;&nbsp;<i>(solved)</i> </h2>
 
 ```
 Code                               C      N2
