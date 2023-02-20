@@ -22,6 +22,7 @@ lab. C.Bodoga
 Chisinau 2023
 </p><br>
 <hr></br>
+<br><h2 align="center"><b>Module 1</b></h2>
 <br><br><br><h2><b>1.2 Network Components</b></h2><br>
 
 <h3>1.   <b>Q: </b> Which of the following is the name for all computers connected to a network that participate directly in network communication? </h3>
@@ -228,7 +229,192 @@ Chisinau 2023
 - They originate the data that flows through the network.
 - They are the interface between humans and the communication network.
 
+<hr>
+<br><h2 align="center"><b>Module 2</b></h2>
 
+<br><br><br><h2><b>2.1Cisco IOS Access</b></h2><br>
+
+<h3>1.   <b>Q: </b> Which access method would be most appropriate if you were in the equipment room with a new switch that needs to be configured?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Console
+
+<h3>2.   <b>Q: </b> Which access method would be most appropriate if your manager gave you a special cable and told you to use it to configure the switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Console
+
+<h3>3.   <b>Q: </b> Which access method would be the most appropriate in-band access to the IOS over a network connection?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Telnet/SSH
+
+<h3>4.   <b>Q: </b> Which access method would be the most appropriate if you call your manager to tell him you cannot access your router in another city over the internet and he provides you with the information to access the router through a telephone connection?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Aux
+
+<br><br><hr><br><h2><b>2.2 IOS Navigation</b></h2><br>
+
+<h3>1.   <b>Q: </b> Which IOS mode allows access to all commands and features?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>privileged EXEC mode
+
+<h3>2.   <b>Q: </b> Which IOS mode are you in if the Switch(config)# prompt is displayed?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>global configuration mode
+
+<h3>3.   <b>Q: </b> Which IOS mode are you in if the Switch> prompt is displayed?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>user EXEC mode
+
+<h3>4.   <b>Q: </b> Which two commands would return you to the privileged EXEC prompt regardless of the configuration mode you are in? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- CTRL-Z
+- end
+
+<br><br><hr><br><h2><b>2.4 Basic Device Configuration</b></h2><br>
+
+<h3>1.   <b>Q: </b> What is the command to assign the name “Sw-Floor-2” to a switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b><strong>hostname</strong> Sw-Floor-2
+
+
+<h3>2.   <b>Q: </b> How is the privileged EXEC mode access secured on a switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>enable secret class
+
+
+<h3>3.   <b>Q: </b> Which command enables password authentication for user EXEC mode access on a switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>login
+
+<h3>4.   <b>Q: </b> Which command encrypts all plaintext passwords access on a switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>service password-encryption
+
+<h3>5.   <b>Q: </b> Which is the command to configure a banner to be displayed when connecting to a switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>banner motd $ Keep out $
+
+<br><br><hr><br><h2><b>2.6 Ports and Addresses</b></h2><br>
+
+<h3>1.   <b>Q: </b> What is the structure of an IPv4 address called?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>dotted-decimal format
+
+<br><br><hr><br><h2><b></b></h2><br>
+
+<h3>2.   <b>Q: </b> How is an IPv4 address represented?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>four decimal numbers between 0 and 255 separated by periods.
+
+<br><br><hr><br><h2><b></b></h2><br>
+
+<h3>..   <b>Q: </b> What type of interface has no physical port associated with it?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>switch virtual interface (SVI)
+
+
+
+<br><br><hr><br><h2><b>2.9 Module Practice and Quiz</b></h2><br>
+
+
+<h3>1.   <b>Q: </b> Which statement is true about the running configuration file in a Cisco IOS device?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>It affects the operation of the device immediately when modified.
+
+<h3>2.   <b>Q: </b> Which two statements are true regarding the user EXEC mode? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- Only some aspects of the router configuration can be viewed.
+- The device prompt for this mode ends with the "
+
+<h3>3.   <b>Q: </b> Which type of access is secured on a Cisco router or switch with the enable secret command?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>privileged EXEC
+
+<h3>4.   <b>Q: </b> What is the default SVI on a Cisco switch?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>VLAN1
+
+<h3>5.   <b>Q: </b>When a hostname is configured through the Cisco CLI, which three naming conventions are part of the guidelines? (Choose three.) 
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- the hostname should begin with a letter
+- the hostname should contain no spaces
+- the hostname should be fewer than 64 characters in length
+
+<h3>6.   <b>Q: </b> What is the function of the shell in an OS?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>It interfaces between the users and the kernel.
+
+<h3>7.   <b>Q: </b> A router with a valid operating system contains a configuration file stored in NVRAM. The configuration file has an enable secret password but no console password. When the router boots up, which mode will display?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>user EXEC mode
+
+<h3>8.   <b>Q: </b> An administrator has just changed the IP address of an interface on an IOS device. What else must be done in order to apply those changes to the device?
+
+
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Nothing must be done. Changes to the configuration on an IOS device take effect as soon as the command is typed correctly and the Enter key has been pressed.
+
+<h3>9.   <b>Q: </b> Which memory location on a Cisco router or switch will lose all content when the device is restarted?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>RAM
+
+<h3>10.   <b>Q: </b> Why would a technician enter the command copy startup-config running-config?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+<h3>11.   <b>Q: </b> Which functionality is provided by DHCP?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>to copy an existing configuration into RAM
+
+<h3>12.   <b>Q: </b> Which two functions are provided to users by the context-sensitive help feature of the Cisco IOS CLI? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>automatic assignment of an IP address to each host
+
+- displaying a list of all available commands within the current mode
+-determining which option, keyword, or argument is available for the entered command
+
+<h3>13.   <b>Q: </b>Which memory location on a Cisco router or switch stores the startup configuration file? 
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>NVRAM
+
+<h3>14.   <b>Q: </b> To what subnet does the IP address 10.1.100.50 belong if a subnet mask of 255.255.0.0 is used?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>10.1.0.0
 
 
 
