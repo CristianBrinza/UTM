@@ -58,7 +58,7 @@
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
 |AA |[Theory](year2/aa/)|[Labs](year2/aa/labs/)|| 
-|RC||[Labs](year2/rc/labs/)|
+|RC|[Theory](year2/rc/)|[Labs](year2/rc/labs/)|
 |LFAF |[Theory](year2/lfaf/)|[Labs](year2/lfaf/labs/)|| 
 
 </br></br>
