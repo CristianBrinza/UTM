@@ -21,6 +21,65 @@ lab. C. Bodoga
 </br><p align=center>  
 Chisinau 2023
 </p><br>
+
+
+
+<h1 align="center"><b>Usefull</b></h1>
+
+<table>
+<tr>
+<td><b>Switch></b> enable  </tdSwitch>
+<td><i>enter privileged EXEC</i></td>
+</tr>
+<tr>
+<td><b>Switch#</b> show running-config</td>
+<td><i>show running-config command.
+ </i></td>
+</tr>
+<tr>
+<td>><b>S1#</b> config t</td>
+<td><i>same as :Switch# show running-config
+ </i></td>
+</tr>
+
+<tr>
+<td><b>S1#</b> configure terminal<br>
+ <b>S1(config)#</b>  line console 0<br>
+ <b>S1(config-line)# </b> password letmein<br>
+<b> S1(config-line)#</b> login</td>
+<td><i> adding password
+</i></td>
+</tr>
+<tr>
+
+<td><b>S1></b>  enable<br>
+<b>S1#</b>  configure terminal<br>
+<b>S1(config)#</b>  enable password c1$c0
+</td>
+<td><i>add privileged EXEC password </i></td>
+</tr>
+<tr>
+<td><b> Switch# </b>configure terminal<br>
+<b>Switch(config)#</b> hostname S1<br>
+<b>S1(config)#</b> exit
+</td>
+<td><i>Assign a name (hostname) to a switch </i></td>
+</tr>
+<tr>
+<td><b>S1#</b>  config t <br>
+<b>S1(config)#</b>  banner motd "This is a secure system. Authorized Access Only!"</td>
+<td><i>add banner </i></td>
+</tr>
+<tr>
+<td><b>S1#</b> copy running-config startup-config</td>
+<td><i>save  </i></td>
+</tr>
+<tr>
+<td><b>S1#</b> config t<br>
+<b>S1(config)#</b> service password-encryption</td>
+<td><i> encrypt password</i></td>
+</tr>
+</table>
 <hr></br>
 <br><h2 align="center"><b>Module 1</b></h2>
 <br><h2><b>1.2 Network Components</b></h2><br>
