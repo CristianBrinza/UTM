@@ -16,14 +16,14 @@ p. . Rețele de Calculatoare
 </p>
 <p align=right>  
 c. D. Turcanu <br>
-lab. C.Bodoga
+lab. C. Bodoga
 </p>
 </br><p align=center>  
 Chisinau 2023
 </p><br>
 <hr></br>
 <br><h2 align="center"><b>Module 1</b></h2>
-<br><br><br><h2><b>1.2 Network Components</b></h2><br>
+<br><h2><b>1.2 Network Components</b></h2><br>
 
 <h3>1.   <b>Q: </b> Which of the following is the name for all computers connected to a network that participate directly in network communication? </h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -231,8 +231,7 @@ Chisinau 2023
 
 <hr>
 <br><h2 align="center"><b>Module 2</b></h2>
-
-<br><br><br><h2><b>2.1Cisco IOS Access</b></h2><br>
+<br><h2><b>2.1 Cisco IOS Access</b></h2><br>
 
 <h3>1.   <b>Q: </b> Which access method would be most appropriate if you were in the equipment room with a new switch that needs to be configured?
 </h3>
@@ -315,16 +314,15 @@ Chisinau 2023
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>A: </b>dotted-decimal format
 
-<br><br><hr><br><h2><b></b></h2><br>
+
 
 <h3>2.   <b>Q: </b> How is an IPv4 address represented?
 </h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>A: </b>four decimal numbers between 0 and 255 separated by periods.
 
-<br><br><hr><br><h2><b></b></h2><br>
 
-<h3>..   <b>Q: </b> What type of interface has no physical port associated with it?
+<h3>3.   <b>Q: </b> What type of interface has no physical port associated with it?
 </h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>A: </b>switch virtual interface (SVI)
@@ -415,6 +413,287 @@ Chisinau 2023
 </h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>A: </b>10.1.0.0
+
+
+
+<hr></br>
+<br><h2 align="center"><b>Module 1</b></h2>
+<br><h2><b>3.1 The Rules</b></h2><br>
+
+
+<h3>1.   <b>Q: </b> What is the process of converting information into the proper form for transmission?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Encoding
+
+<h3>2.   <b>Q: </b> Which step of the communication process is concerned with properly identifying the address of the sender and receiver?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Formatting
+
+<h3>3.   <b>Q: </b> Which three are components of message timing? (Choose three.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- Flow control
+- Access method
+- Response timeout
+
+<h3>4.   <b>Q: </b> Which delivery method is used to transmit information to one or more end devices, but not all devices on the network?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Multicast
+
+
+<br><br><hr><br><h2><b>3.2 
+Network Protocol Overview</b></h2><br>
+
+<h3>1.   <b>Q: </b> BGP and OSPF are examples of which type of protocol?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>routing
+
+
+<h3>2.   <b>Q: </b> Which two protocols are service discovery protocols? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- DNS
+- DHCP
+
+<h3>3.   <b>Q: </b> What is the purpose of the sequencing function in network communication?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>to uniquely label transmitted segments of data for proper reassembly by the receiver
+
+<h3>4.   <b>Q: </b> This protocol is responsible for guaranteeing the reliable delivery of information.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>TCP
+
+
+<br><br><hr><br><h2><b>3.3 Protocol Suites</b></h2><br>
+
+<h3>1.   <b>Q: </b> UDP and TCP belong to which layer of the TCP/IP protocol?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>transport
+
+<h3>2.   <b>Q: </b> Which two protocols belong in the TCP/IP model application layer?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- DNS
+- DHCP
+
+<h3>3.   <b>Q: </b> Which protocol operates at the network access layer of the TCP/IP model?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Ethernet
+
+<h3>4.   <b>Q: </b> Which of the following are protocols that provide feedback from the destination host to the source host regarding errors in packet delivery? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- ICMPv4
+- ICMPv6
+
+<h3>5.   <b>Q: </b> A device receives a data link frame with data and processes and removes the Ethernet information. What information would be the next to be processed by the receiving device?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>IP at the internet layer
+
+<h3>6.   <b>Q: </b> Which services are provided by the internet layer of the TCP/IP protocol suite? (Choose three.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- Routing Protocols
+- Messaging
+- Internet Protocol
+
+
+
+<br><br><hr><br><h2><b></b></h2><br>
+
+<h3>1.   <b>Q: </b> True or false. Standards organizations are usually vendor-neutral.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>True
+
+<h3>2.   <b>Q: </b> This standards organization is concerned with the Request for Comments (RFC) documents that specify new protocols and update existing ones.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Internet Engineering Task Force (IETF)
+
+<h3>3.   <b>Q: </b> This standards organization is responsible for IP address allocation and domain name management.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>Internet Assigned Numbers Authority (IANA)
+
+<h3>4.   <b>Q: </b> What types of standards are developed by the Electronics Industries Alliance (EIA)?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b> electric wiring and connectors
+
+
+<br><br><hr><br><h2><b>3.6 Data Encapsulation</b></h2><br>
+
+<h3>1.   <b>Q: </b> What is the process of dividing a large data stream into smaller pieces prior to transmission?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>segmentation
+
+<h3>2.   <b>Q: </b> What is the PDU associated with the transport layer?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>segment
+
+<h3>3.   <b>Q: </b> Which protocol stack layer encapsulates data into frames?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>data link
+
+<h3>4.   <b>Q: </b> What is the name of the process of adding protocol information to data as it moves down the protocol stack?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>encapsulation
+
+
+<br><br><hr><br><h2><b>3.7 Data Access</b></h2><br>
+
+<h3>1.   <b>Q: </b> True or false? Frames exchanged between devices in different IP networks must be forwarded to a default gateway.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>True
+
+<h3>2.   <b>Q: </b> True or false? The right-most part of an IP address is used to identify the network that a device belongs to.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b> False
+
+<h3>3.   <b>Q: </b> What is used to determine the network portion of an IPv4 address?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>subnet mask
+
+<h3>4.   <b>Q: </b> Which of the following statements are true regarding network layer and data link layer addresses? (Choose three.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- Network layer addresses are logical and data link addresses are expressed as 12 hexadecimal digits.
+- Data link layer addresses are physical and network layer addresses are logical.
+- Network layer addresses are either 32 or 128 bits in length.
+
+<h3>5.   <b>Q: </b> What is the order of the two addresses in the data link frame?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>destination MAC, source MAC
+
+<h3>6.   <b>Q: </b> True or False? Data Link addresses are physical so they never change in the data link frame from source to destination.
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b> False
+
+
+
+
+<br><br><hr><br><h2><b>3.8 Module Quiz - Protocols and Models</b></h2><br>
+
+<h3>1.   <b>Q: </b> Which three acronyms/initialisms represent standards organizations? (Choose three.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- IETF
+- IANA
+- IEEE
+
+<h3>2.   <b>Q: </b> What type of communication will send a message to all devices on a local area network?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>broadcast
+
+<h3>3.   <b>Q: </b> In computer communication, what is the purpose of message encoding?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>to convert information to the appropriate form for transmission
+
+<h3>4.   <b>Q: </b> Which message delivery option is used when all devices need to receive the same message simultaneously?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>broadcast
+
+<h3>5.   <b>Q: </b> What are two benefits of using a layered network model? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- It prevents technology in one layer from affecting other layers.
+- It assists in protocol design.
+
+<h3>6.   <b>Q: </b> What is the purpose of protocols in data communications?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>providing the rules required for a specific type of communication to occur
+
+<h3>7.   <b>Q: </b> Which logical address is used for delivery of data to a remote network?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>destination IP address
+
+<h3>8.   <b>Q: </b> What is the general term that is used to describe a piece of data at any layer of a networking model?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>protocol data unit
+
+<h3>9.   <b>Q: </b> Which two protocols function at the internet layer? (Choose two.)
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>
+
+- IP
+- ICMP
+
+<h3>10.   <b>Q: </b>Which layer of the OSI model defines services to segment and reassemble data for individual communications between end devices? 
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>transport
+
+<h3>11.   <b>Q: </b> Which type of communication will send a message to a group of host destinations simultaneously?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>multicast
+
+<h3>12.   <b>Q: </b>What process is used to receive transmitted data and convert it into a readable message? 
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>decoding
+
+<h3>13.   <b>Q: </b> What is done to an IP packet before it is transmitted over the physical medium?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>It is encapsulated in a Layer 2 frame.
+
+<h3>14.   <b>Q: </b>What process is used to place one message inside another message for transfer from the source to the destination? 
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>encapsulation
+
+<h3>15.   <b>Q: </b> A web client is sending a request for a webpage to a web server. From the perspective of the client, what is the correct order of the protocol stack that is used to prepare the request for transmission?
+</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>A: </b>HTTP, TCP, IP, Ethernet
+
+
+
+
+
 
 
 
