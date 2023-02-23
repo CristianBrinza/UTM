@@ -1,0 +1,15 @@
+.center-div
+{
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
+
+
+  translate: -50% -50%;
+ 
+  
+}
+
+#choose{
+    color: rgb(63, 63, 240);
+}
