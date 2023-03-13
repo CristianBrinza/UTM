@@ -14,7 +14,7 @@
 <p align="center">Feel free to fork, change, or improve in any way this repository... lets help our colleagues have a easier and more enjoyable live in University</p>
 
 --------------- 
-<h3 align="center"><a herf="https://github.com/CristianBrinza/UTM/blob/main/git_reps_list.md">links to FAF students github repositories</a></h3>
+<a herf="https://github.com/CristianBrinza/UTM/blob/main/git_reps_list.md"><p align="center" >links to FAF students github repositories</a></p>
 </br></br>
 
 <h1 align="center" >Anul I (2021-2022)</h1>
