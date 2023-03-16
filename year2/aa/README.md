@@ -117,7 +117,7 @@ cei n termeni.)<p style="margin-bottom:0;" align=center ><img align='center' sty
   width: 15%; " src=documetation_resources/p002.png /></p> 
 
 <br><br>
-<h2 align="center"><b> Probleme:</b></h2>
+<h2 align="center"><b> Problema:</b></h2>
 
 Grandma gave each grandchild <b>a</b> pen and <b>two</b> pencils, she had 5 pens and 19 pencils left. How many grandchildren does the grandmother have, if initially there were three times as many pencils?
 <br><br>
@@ -190,3 +190,66 @@ for i <- 1, n do                | 1  |  n
 <p align=right>  
 c. AA | FCIM UTM Spring 2022 | 3-104 | 15.02.2023
 </p>
+
+
+
+<h2 align="center">🏡 Pentru acasa: &nbsp;&nbsp;<i>(solved)</i> </h2>
+
+<br>
+<h2 align="center"><b> Problema:</b></h2>
+<i>&nbsp;&nbsp;&nbsp;&nbsp; There are 12 coins. One of them is false; it weights differently. It is not known, if the false coin is heavier or lighter than the right coins. How to find the false coin by three weighs on a simple scale?</i>
+
+
+1. Start by numbering the coins 1..12.
+    - put 1,2,3,4 on the left scale, 5,6,7,8 on the right.
+2. <b>outcome (1):</b> even balance => one of the last 4 coins is false. Now put 9, 10 and 11 on the left and 1, 2 and 3 on the right side.
+    - <b>outcome (1.1)</b> even balance => coin 12 is false. Compare 1 and 12 to find out if 12 is lighter or heavier.
+    - <b>outcome (1.2)</b> left goes down => 9, 10 or 11 is heavier. Compare 9 and 10 to see which one is heavier, or, if equal, 11 is heavier.
+    - <b>outcome (1.3)</b> right side goes down => 9, 10 or 11 is lighter. Figure out which one like (1.2)
+3. <b>outcome (2):</b> left side goes down => 1,2,3 or 4 is too heavy or 5, 6, 7 or 8 too light. Put 1,2 and 5 on the left side and 3,4 and 6 on the right.
+    - <b>outcome (2.1)</b> even balance: 7 or 8 is too light. compare them to find out which one.
+    - <b>outcome (2.2)</b> left side goes down => 1 or 2 is too heavy or 6 is too light. compare 1 and 2 to find out which one is heavier. if even balance, 6 is too light.
+    - <b>outcome (2.3)</b> right side goes down => 3 or 4 too heavy, or 5 is too light. Figure out which one by comparing 3 and 4.
+4. <b>outcome (3):</b> right side goes down => 1,2,3,4 too light or 5,6,7,8 too heavy. Similar to (2).e 
+
+
+or... (second method)
+
+1. We put half of the coins on one side of the scale and half on the other side of the scale.
+2. We shall be able to find the six coins including the false coin.
+3. We divide these six coins including the false coin into two groups each having three coins. We put three coins one side of the scale and the other three on the other side of the scale.
+4. We shall be able to identify 3 coins with false coin included.
+5. We can put one coin from these three coins on one side of the scale and another on the other side. These two coins will weigh equal or one will be different. We shall be able to identify the false coin
+
+
+
+<br>
+<h2 align="center"><b> Problema:</b></h2>
+<i>&nbsp;&nbsp;&nbsp;&nbsp; I am in a 100-story building. I have with me two glass balls. I know that if I throw the ball out of the window, it will not break if the floor number is less than X, and it will always breaks if the floor number is equal to or greater than X.<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Assuming that I can reuse the balls which don't break, find X in the minimum number of throws.</i><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This is a classic puzzle known as the Two Glass Balls or Two Eggs Problem. The goal is to minimize the worst-case number of throws to find the floor number X, where the glass ball breaks.
+<br>
+<br>
+<p align="center">Here's the optimal strategy:</p>
+
+1. Start by dividing the 100 floors into intervals. You can choose an interval size N, and throw the first ball at every Nth floor, starting from floor N, then 2N, 3N, and so on.
+    - If the first ball breaks at floor Ni, you know that X is between (N(i-1)+1) and N*i (inclusive).
+2. Now, take the second ball and start testing each floor within that interval, starting from the floor (N*(i-1)+1) and going up one floor at a time.
+3. To minimize the maximum number of throws, you need to find the optimal interval size N. 
+    - In the worst case, you might need to throw the first ball N times and the second ball (N-1) times. So the worst-case number of throws is N + (N-1), which should be minimized.
+
+<p align="center">For a 100-story building, the optimal interval size is 14. 
+</p>
+This means you throw the first ball at floors 14, 28, 42, 56, 70, 84, and 100. In the worst case, you would need 14 throws for the first ball and 13 throws for the second ball, resulting in a maximum of 27 throws in total.
+
+<br>
+<p align="center"><b>So, using this strategy, you can find the floor number X in at most 27 throws.</b></p>
+
+
+<hr>
+<br>
+<p align=right>  
+c. AA | FCIM UTM Spring 2022 | 3-104 | 15.03.2023
+</p>
+
