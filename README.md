@@ -29,6 +29,7 @@
 |MD|[HW](year1/md)||   [Steward 7E]()
 |PSA|[HW](year1/psa)
 |PC||[Labs](year1/pc)|[Labs solutions](https://cf-problemset.herokuapp.com/)
+|MN||[HW](year1/mn/hw)|
 
 | Object  | Resources |
 | ------------- | -------------                      
