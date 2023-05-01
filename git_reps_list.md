@@ -17,4 +17,5 @@
 -  Maxim Cernetchi - [link](https://github.com/malmilo6)
 -  Procopii Maria - [link](https://github.com/MariaProcopii)
 -  Cara Alexandr- [link]()
+- Vlad Ursu [link](https://github.com/Vlad-Urs)
 
