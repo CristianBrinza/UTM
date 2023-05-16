@@ -140,14 +140,14 @@ class Lexer:
         different types of applications, such as parsing or natural language processing
     '''
 # Create an instance of the Lexer class with the specified file as input
-NewLexer = Lexer('DSLCode\code.txt')
+NewLexer = Lexer('code.txt')
 # Tokenize the input and store the output in a variable called tokens
 tokens = NewLexer.tokenize()
 
 
 '''
 The last two lines of code create a new Lexer object, 
-pass it the file name 'DSLCode\code.txt', and tokenize its contents. 
+pass it the file name 'code.txt', and tokenize its contents. 
 The resulting list of tokens is printed to the console using the print() statement.
 '''
 print(tokens)
