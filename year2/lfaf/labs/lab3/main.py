@@ -16,16 +16,19 @@ print('')
 
 # Defining a dictionary representing a context-free grammar
 p = {
-    'S':['aA'],
-    'A':['bS','aB'],
-    'B':['bC','aBB'],
-    'C':['aA','b'],
-} 
+    'S' : ['dB', 'A'],
+    'A' : ['d', 'dS', 'aAdAB'],
+    'B' : ['aC', 'aS', 'AC'],
+    'C' : [''],
+    'E' : ['AS']
+}
 
 # Defining the non-terminals and terminals of the grammar
 vn = ['S','A','B','C']
-vt = ['a','b']
+vt = ['a','d']
 a = vt
+
+
 
 
 new_grammar = RegularGrammar(vn,vt,p,a)
