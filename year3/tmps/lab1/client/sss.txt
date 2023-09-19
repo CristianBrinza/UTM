@@ -1,0 +1,273 @@
+client/Main.java:
+package client;
+
+import domain.Library;
+import factory.AbstractFactory;
+import factory.BookFactory;
+import factory.TransactionFactory;
+import factory.UserFactory;
+import models.IBook;
+import models.Transaction;
+import models.User;
+
+public class Main {
+    public static void main(String[] args) {
+        BookFactory bookFactory = new BookFactory();
+        AbstractFactory<User> userFactory = new UserFactory();
+        AbstractFactory<Transaction> transactionFactory = new TransactionFactory();
+
+        Library library = new Library();
+
+        library.addBook("Moby Dick", "Herman Melville");
+        library.addBook("The Great Gatsby", "F. Scott Fitzgerald");
+
+        library.addUser("Alice");
+        library.addUser("Bob");
+
+        // Instead of creating a new instance, retrieve the book and user from the library
+        IBook book1 = library.getBookByTitle("Moby Dick"); // You'll need to implement this method in the Library class
+        User user1 = library.getUserByName("Alice");       // You'll need to implement this method in the Library class
+
+        library.issueBook(user1, book1);
+
+        // Add more operations as needed.
+    }
+}
+
+
+
+domain/Library.java:
+package domain;
+
+import factory.AbstractFactory;
+import factory.BookFactory;
+import factory.TransactionFactory;
+import factory.UserFactory;
+import models.IBook;
+import models.Transaction;
+import models.User;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+    private List<IBook> books;
+    private List<User> users;
+    private List<Transaction> transactions;
+    private BookFactory bookFactory;
+    private AbstractFactory<User> userFactory;
+    private AbstractFactory<Transaction> transactionFactory;
+
+    // DIP: Depend upon abstraction. Constructors now expect factories that adhere to the AbstractFactory interface.
+    public Library() {
+        this.bookFactory = new BookFactory();
+        this.userFactory = new UserFactory();
+        this.transactionFactory = new TransactionFactory();
+        this.books = new ArrayList<>();
+        this.users = new ArrayList<>();
+        this.transactions = new ArrayList<>();
+    }
+
+    public IBook getBookByTitle(String title) {
+        for (IBook book : books) {
+            if (book.getTitle().equals(title)) {
+                return book;
+            }
+        }
+        return null; // or throw an exception if the book is not found
+    }
+
+    public User getUserByName(String name) {
+        for (User user : users) {
+            if (user.getName().equals(name)) {
+                return user;
+            }
+        }
+        return null; // or throw an exception if the user is not found
+    }
+
+    public void addBook(String title, String author) {
+        IBook book = bookFactory.create(books.size() + 1, title, author);
+        books.add(book);
+
+
+    // Rest of the class remains the same...
+}
+
+    public void addUser(String name) {
+        User user = userFactory.create(users.size() + 1, name);
+        users.add(user);
+    }
+    public void issueBook(User user, IBook book) {
+        // Check if the book is available
+        if(!books.contains(book)) {
+            throw new IllegalStateException("Book is not available");
+        }
+
+        // Check if the user is registered
+        if(!users.contains(user)) {
+            throw new IllegalStateException("User is not registered");
+        }
+
+        // Create a transaction
+        Transaction transaction = transactionFactory.create(user, book);
+        transactions.add(transaction);
+
+        // Remove the issued book from available books
+        books.remove(book);
+    }
+
+}
+
+factory/AbstractFactory.java (interface):
+package factory;
+
+// ISP: Introducing an interface for Factory.
+
+
+public interface AbstractFactory<T> {
+    T create(Object... args);
+}
+
+factory/BookFactory.java:
+package factory;
+
+import models.Book;
+
+public class BookFactory implements AbstractFactory<Book> {
+    // OCP: Allow dynamic creation of a book based on passed arguments.
+    @Override
+    public Book create(Object... args) {
+        if(args.length < 3) {
+            throw new IllegalArgumentException("Not enough arguments to create a book");
+        }
+        int id = (int) args[0];
+        String title = (String) args[1];
+        String author = (String) args[2];
+        return new Book(id, title, author);
+    }
+}
+
+factory/TransactionFactory.java:
+package factory;
+
+import models.Transaction;
+import models.IBook;
+import models.User;
+
+public class TransactionFactory implements AbstractFactory<Transaction> {
+    @Override
+    public Transaction create(Object... args) {
+        if(args.length < 2) {
+            throw new IllegalArgumentException("Not enough arguments to create a transaction");
+        }
+
+        User user = (User) args[0];
+        IBook book = (IBook) args[1];
+
+        return new Transaction(user, book);
+    }
+}
+factory/UserFactory.java:
+package factory;
+
+import models.User;
+
+public class UserFactory implements AbstractFactory<User> {
+    @Override
+    public User create(Object... args) {
+        if(args.length < 2) {
+            throw new IllegalArgumentException("Not enough arguments to create a user");
+        }
+
+        int id = (int) args[0];
+        String name = (String) args[1];
+        return new User(id, name);
+    }
+}
+
+
+models/Book.java:
+package models;
+
+public class Book implements IBook {
+    private int id;
+    private String title;
+    private String author;
+
+    // SRP: Represents a single entity, a book.
+    public Book(int id, String title, String author) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+    }
+
+    // Implementations of IBook methods
+    @Override
+    public int getId() { return id; }
+    @Override
+    public String getTitle() { return title; }
+    @Override
+    public String getAuthor() { return author; }
+}
+
+
+models/IBook.java (interface):
+package models;
+
+// ISP: Introducing an interface for Book.
+public interface IBook {
+    int getId();
+    String getTitle();
+    String getAuthor();
+}
+
+models/Transaction.java:
+package models;
+
+import java.util.Date;
+
+// SRP: Represents a single entity, a transaction.
+public class Transaction {
+    private int id;
+    private User user;
+    private Book book;
+    private Date issuedDate;
+    private Date returnDate;
+
+    public Transaction(int id, User user, Book book, Date issuedDate) {
+        this.id = id;
+        this.user = user;
+        this.book = book;
+        this.issuedDate = issuedDate;
+        this.returnDate = null;
+    }
+
+    public Transaction(User user, IBook book) {
+    }
+
+    public int getId() { return id; }
+    public User getUser() { return user; }
+    public Book getBook() { return book; }
+    public Date getIssuedDate() { return issuedDate; }
+    public Date getReturnDate() { return returnDate; }
+
+    public void setReturnDate(Date returnDate) { this.returnDate = returnDate; }
+}
+
+models/User.java:
+package models;
+
+// SRP: Represents a single entity, a user.
+public class User {
+    private int id;
+    private String name;
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() { return id; }
+    public String getName() { return name; }
+}

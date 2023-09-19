@@ -1,11 +1,20 @@
 package client;
 
 import domain.Library;
-import models.Book;
+import factory.AbstractFactory;
+import factory.BookFactory;
+import factory.TransactionFactory;
+import factory.UserFactory;
+import models.IBook;
+import models.Transaction;
 import models.User;
 
 public class Main {
     public static void main(String[] args) {
+        BookFactory bookFactory = new BookFactory();
+        AbstractFactory<User> userFactory = new UserFactory();
+        AbstractFactory<Transaction> transactionFactory = new TransactionFactory();
+
         Library library = new Library();
 
         library.addBook("Moby Dick", "Herman Melville");
@@ -14,8 +23,9 @@ public class Main {
         library.addUser("Alice");
         library.addUser("Bob");
 
-        Book book1 = new Book(1, "Moby Dick", "Herman Melville");
-        User user1 = new User(1, "Alice");
+        // Instead of creating a new instance, retrieve the book and user from the library
+        IBook book1 = library.getBookByTitle("Moby Dick"); // You'll need to implement this method in the Library class
+        User user1 = library.getUserByName("Alice");       // You'll need to implement this method in the Library class
 
         library.issueBook(user1, book1);
 
