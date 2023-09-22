@@ -1,3 +1,16 @@
+
+# ░▄▀▀░▄▀▀ c. CS | FAF | FCIM | UTM | Fall 2023
+# ░▀▄▄▒▄██ FAF-212 Cristian Brinza lab1 
+
+
+print('')
+print('░▄▀▀░▄▀▀  c. CS | FAF | FCIM | UTM | Fall 2023')
+print('░▀▄▄▒▄██  FAF-212 Cristian Brinza lab1 ')
+print('')
+
+
+
+
 # Define a function to display the menu options to the user.
 def display_menu():
     """
