@@ -58,7 +58,10 @@ def extract_product_info(parsed_content):
     """Extracts product information from the parsed content."""
     product_info = {}
     description_section = parsed_content.find('div', {'class': 'adPage__content__description grid_18'})
-    product_info['Description'] = description_section.text
+    if description_section:
+        product_info['Description'] = description_section.text
+    else:
+        product_info['Description'] = 'Description not found.'
     features_section = parsed_content.find('div', {'class': 'adPage__content__features'}).find_all('h2')
     for feature in features_section:
         feature_details = {}
