@@ -1,3 +1,22 @@
+
+
+'''
+The VigenereCipher class handles all the cipher-related functionality.
+The _shift_row, _create_matrix, _extend_key, _get_indexes, and _validate_input methods are helper methods used internally by the class.
+The encrypt_decrypt method performs the encryption or decryption based on the provided operation argument.
+The menu function provides a simple user interface to interact with the cipher functionality.
+Extensive comments are provided to explain each part of the code and its functionality.
+
+
+
+Alphabet: The Romanian alphabet is used, which contains specific characters and has a length of 31.
+Key Length: The key length should be at least 7, which can be validated in the encrypt_decrypt method.
+Character Validation: The _validate_input method ensures that only valid characters are used.
+Uppercase Conversion and Space Removal: All characters are converted to uppercase and spaces are removed in the encrypt_decrypt method.
+
+
+'''
+
 class VigenereCipher:
     def __init__(self, alphabet):
         # Initialize the alphabet and create the Vigenere matrix
