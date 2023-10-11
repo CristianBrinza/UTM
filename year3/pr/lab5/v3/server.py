@@ -81,7 +81,11 @@ def client_handler(client_socket, client_address):
                     "message": f"{message_json['payload']['file_name']} has been uploaded."
                 }
             }
-            broadcast_message(message_json['payload']['room'], notification_message, sender_socket=client_socket)
+            try:
+                broadcast_message(message_json['payload']['room'], notification_message,sender_socket=client_socket)
+            except KeyError:
+                print("Warning: The 'room' key was not found in the message payload.")
+            # Additional error handling or logging code can go here if needed.
         elif message_json['type'] == 'file_download':
             # Send requested file to client
             send_file(client_socket, message_json['payload']['file_name'])
