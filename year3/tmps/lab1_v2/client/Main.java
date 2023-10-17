@@ -34,8 +34,8 @@ public class Main {
         PublicationService magazineService = new MagazineServiceImpl();
 
         // Using the factory to create instances of publications.
-        Publication book = PublicationFactory.createBook("1984", "George Orwell", "978-0451524935");
-        Publication magazine = PublicationFactory.createMagazine("2009", "Time Inc.", "0032-7830");
+        Publication book = PublicationFactory.createBook("1984", "Cristian Brinza", "978-0451524935");
+        Publication magazine = PublicationFactory.createMagazine("Title", "Time Inc.", "0032-7830");
 
         // OCP: Using the PublicationService interface allows for extending the system with more types
         // of publications without changing this code.

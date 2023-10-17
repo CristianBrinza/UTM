@@ -1,0 +1,165 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "lab6",
+    "description": "lab6"
+  },
+  "host": "127.0.0.1:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/scooters/": {
+      "get": {
+        "summary": "List all scooters",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Scooter"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ScooterWithoutID"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Scooter created successfully",
+            "schema": {
+              "$ref": "#/definitions/Scooter"
+            }
+          }
+        }
+      }
+    },
+    "/scooters/{id}": {
+      "get": {
+        "summary": "Fetch by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Scooter"
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Add by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ScooterWithoutID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scooter updated successfully",
+            "schema": {
+              "$ref": "#/definitions/Scooter"
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scooter deleted successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Scooter": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The scooter unique identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "The scooter name"
+        },
+        "battery_level": {
+          "type": "number",
+          "description": "Battery level in percentage"
+        }
+      }
+    },
+    "ScooterWithoutID": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The scooter name"
+        },
+        "battery_level": {
+          "type": "number",
+          "description": "Battery level in percentage"
+        }
+      }
+    }
+  }
+}

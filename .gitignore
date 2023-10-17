@@ -5,3 +5,4 @@ ___pycache___
 .vscode
 .DS_Store
 
+*.class
