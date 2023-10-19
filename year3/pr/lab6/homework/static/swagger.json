@@ -1,0 +1,172 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2.2.8",
+    "title": "Electro Scooter API",
+    "description": "A simple Electro Scooter API"
+  },
+  "host": "127.0.0.1:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/scooters/": {
+      "get": {
+        "summary": "List all scooters",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Scooter"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new scooter",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ScooterWithoutID"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Scooter created successfully",
+            "schema": {
+              "$ref": "#/definitions/Scooter"
+            }
+          }
+        }
+      }
+    },
+    "/scooters/{id}": {
+      "get": {
+        "summary": "Fetch a scooter given its identifier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "$ref": "#/definitions/Scooter"
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a scooter given its identifier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ScooterWithoutID"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scooter updated successfully",
+            "schema": {
+              "$ref": "#/definitions/Scooter"
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a scooter given its identifier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "X-Delete-Password",
+            "in": "header",
+            "description": "Password for deletion",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scooter deleted successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Scooter not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Scooter": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "The scooter unique identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "The scooter name"
+        },
+        "battery_level": {
+          "type": "number",
+          "description": "Battery level in percentage"
+        }
+      }
+    },
+    "ScooterWithoutID": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The scooter name"
+        },
+        "battery_level": {
+          "type": "number",
+          "description": "Battery level in percentage"
+        }
+      }
+    }
+  }
+}

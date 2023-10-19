@@ -65,6 +65,15 @@
 |RC|[Theory](year2/rc/)|[Labs](year2/rc/labs/)|
 |LFAF |[Theory](year2/lfaf/)|[Labs](year2/lfaf/labs/)|| 
 |LE|||[course](https://else.fcim.utm.md/course/view.php?id=197)|
+</br></br>
+<h1 align="center" >Anul III (2022-2023)</h1>
+
+
+## Semeter I
+
+| Discipline  | Theory | Laboratories | Templates|
+| ------------- | -------------                      |-------------|-------------|
+|PR|[Theory](year3/aa/)
 
 </br></br>
 <h1 align='center'><i>Stay awesome!</i></h1>
