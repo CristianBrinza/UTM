@@ -10,20 +10,14 @@ public class Book {
     private String isbn;
     private double price;
     private int stockQuantity;
-
-
-    // Constructor to initialize a book
     private PrintTechnique printTechnique;  // Reference to the PrintTechnique interface
 
     // Constructor to initialize a book with printing technique
     public Book(String title, String authorName, String genreName, String isbn, double price,
                 PrintTechnique printTechnique, AttributeFactory attributeFactory) {
         this.title = title;
-        this.author = attributeFactory.getAuthor(String.valueOf(authorName));  // Use AttributeFactory to get Author object
-        this.genre = attributeFactory.getGenre(genreName);    // Use AttributeFactory to get Genre object
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
+        this.author = attributeFactory.getAuthor(authorName);  // Use AttributeFactory to get Author object
+        this.genre = Genre.valueOf(genreName.toUpperCase());    // Convert genre name to Genre enum
         this.isbn = isbn;
         this.price = price;
         this.stockQuantity = 0; // Initial stock is set to zero
@@ -40,8 +34,6 @@ public class Book {
         printTechnique.print(title + " by " + author.getName());  // Use the print method of the specified technique
     }
 
-
-    // Getters and setters will be added in the full implementation
     // Getter methods
     public String getTitle() {
         return title;

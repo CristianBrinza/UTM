@@ -6,5 +6,6 @@ public enum Genre {
     FANTASY,
     SCIENCE_FICTION,
     MYSTERY,
-    BIOGRAPHY;
+    BIOGRAPHY,
+    DRAMA;
 }

@@ -21,7 +21,6 @@ public class Main {
                 .build();
         System.out.println("Built Book using Builder Pattern: " + sampleBook.getTitle());
 
-
         // Bridge Pattern
         PrintTechnique digitalPrint = new DigitalPrint();
         sampleBook.printBook();
@@ -31,10 +30,10 @@ public class Main {
         sampleBook.printBook();  // This uses the DigitalPrint technique
 
         // Composite Pattern
-        // Composite Pattern
         BookComponent book1 = new SingleBook(sampleBook);
-        BookComponent book2 = new SingleBook(new Book("Another Book", new Author("Alice", "Unknown"), Genre.MYSTERY.toString(),  // Corrected the Author and Genre references
-                "67890", 15.0, new Lithography(), new AttributeFactory()));
+        BookComponent book2 = new SingleBook(new Book("Another Book", new Author("Alice", "Unknown").getName(),
+                Genre.MYSTERY.toString(), "67890", 15.0, new Lithography(),
+                new AttributeFactory()));
         BookCollection collection = new BookCollection("Sample Collection");
         collection.addComponent(book1);
         collection.addComponent(book2);
@@ -46,7 +45,8 @@ public class Main {
 
         // Facade Pattern
         BookProductionFacade facade = new BookProductionFacade();
-        facade.produceAndAddBooksToInventory("Facade Book", new Author("Jane", "UK"), Genre.DRAMA, "11223", 25.0, new ScreenPrint(), 100);  // Corrected the Genre reference
+        facade.produceAndAddBooksToInventory("Facade Book", new Author("Jane", "UK"), Genre.DRAMA,
+                "11223", 25.0, new ScreenPrint(), 100);
 
         // Flyweight Pattern
         AttributeFactory attributeFactory = new AttributeFactory();
