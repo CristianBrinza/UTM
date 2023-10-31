@@ -1,14 +1,12 @@
-from LAB2 import player_pb2
-from player import Player
 import xml.etree.ElementTree as ET
+import player_pb2
 
+from player import Player
 
 
 class PlayerFactory:
     def to_json(self, players):
-        '''
-            This function should transform a list of Player objects into a list with dictionaries.
-        '''
+
         json_list = []
         for player in players:
             player_dict = {
@@ -24,62 +22,51 @@ class PlayerFactory:
         pass
 
     def from_json(self, list_of_dict):
-        '''
-            This function should transform a list of dictionaries into a list with Player objects.
-        '''
-        players = []
+        players_temp = []
 
         for data in list_of_dict:
             player = Player(
-                data['nickname'],
-                data['email'],
-                data['date_of_birth'],
-                data['xp'],
-                data['class']
+                data["nickname"],
+                data["email"],
+                data["date_of_birth"],
+                data["xp"],
+                data["class"]
             )
-            players.append(player)
+            players_temp.append(player)
 
-        return players
+        return players_temp
 
         pass
 
     def from_xml(self, xml_string):
-        '''
-            This function should transform a XML string into a list with Player objects.
-        '''
         root = ET.fromstring(xml_string)
         players = []
 
-        for player_element in root.findall('player'):
-            nickname = player_element.find('nickname').text
-            email = player_element.find('email').text
-            date_of_birth = player_element.find('date_of_birth').text
-            xp = int(player_element.find('xp').text)
-            cls = player_element.find('class').text
+        for player_elem in root.findall('player'):
+            nickname = player_elem.find('nickname').text
+            email = player_elem.find('email').text
+            date_of_birth = player_elem.find('date_of_birth').text
+            xp = int(player_elem.find('xp').text)
+            cls = player_elem.find('class').text
             players.append(Player(nickname, email, date_of_birth, xp, cls))
 
         return players
         pass
+    def to_xml(self, list_of_players):
+        data = ET.Element('data')
 
-    def to_xml(self, players):
-        '''
-            This function should transform a list with Player objects into a XML string.
-        '''
-        data = ET.Element("data")
+        for player in list_of_players:
+            player_elem = ET.SubElement(data, 'player')
+            ET.SubElement(player_elem, 'nickname').text = player.nickname
+            ET.SubElement(player_elem, 'email').text = player.email
+            ET.SubElement(player_elem, 'date_of_birth').text = player.date_of_birth.strftime('%Y-%m-%d')
+            ET.SubElement(player_elem, 'xp').text = str(player.xp)
+            ET.SubElement(player_elem, 'class').text = player.cls
 
-        for player in players:
-            player_element = ET.SubElement(data, 'player')
+        return ET.tostring(data, encoding='utf-8').decode('utf-8')
+    pass
 
-            ET.SubElement(player_element, 'nickname').text = player.nickname
-            ET.SubElement(player_element, 'email').text = player.email
-            ET.SubElement(player_element, 'date_of_birth').text = player.date_of_birth
-            ET.SubElement(player_element, 'xp').text = str(player.xp)
-            ET.SubElement(player_element, 'class').text = player.player_class
-
-        return ET.tostring(data).decode()
-
-        pass
-
+    # TODO
     def from_protobuf(self, binary):
         players_list = player_pb2.PlayersList()
         players_list.ParseFromString(binary)
@@ -123,4 +110,3 @@ class PlayerFactory:
         return players_list.SerializeToString()
 
         pass
-

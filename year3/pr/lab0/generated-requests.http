@@ -1,0 +1,7 @@
+POST http://127.0.0.1:5000/hello
+
+{
+    "key1": "value1",
+    "key2": "value2",
+    "key3": "value3"
+}
