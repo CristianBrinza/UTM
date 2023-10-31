@@ -15,7 +15,7 @@
 
 --------------- 
 
-<h5 align="center"><i> <a href="https://github.com/CristianBrinza/UTM/blob/main/git_reps_list.md">links to FAF students github repositories</a>
+<h5 align="center"><i> <a href="https://github.com/CristianBrinza/UTM/blob/main/others/git_reps_list.md">links to FAF students github repositories</a>
                    </i></h5></br>
 
 </br></br>
@@ -74,6 +74,11 @@
 | Discipline  | Theory | Laboratories | Templates|
 | ------------- | -------------                      |-------------|-------------|
 |PR|[Theory](year3/aa/)
+|CS||[Labs](year3/cs/)
+|SO||[Labs](year3/so/labs/)
+|TMPS||[Labs](year3/tmps/)
+
+
 
 </br></br>
 <h1 align='center'><i>Stay awesome!</i></h1>
