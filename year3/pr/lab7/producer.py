@@ -1,88 +1,107 @@
-# Import the pika library to interact with RabbitMQ
-import pika
-# Import the requests library to make HTTP requests
-import requests
-# Import BeautifulSoup from bs4 to parse HTML content
-from bs4 import BeautifulSoup
-# Import the time library for sleep functionality
-import time
+# ▒█▀▄▒█▀▄ lab. PR | FAF | FCIM | UTM | Fall 2023
+# ░█▀▒░█▀▄ FAF-212 Cristian Brinza lab7
 
-# Function to establish a connection with RabbitMQ server
-def establish_connection(retries=5, delay=5, host='rabbitmq', port=5672):
-    # Initialize a variable to keep track of the last exception
-    last_exception = None
-    # Attempt to connect multiple times based on the retries parameter
-    for attempt in range(retries):
-        try:
-            # Attempt to create a blocking connection with the given host and port
-            return pika.BlockingConnection(pika.ConnectionParameters(host=host, port=port))
-        except pika.exceptions.AMQPConnectionError as error:
-            # Print the error if connection attempt fails
-            print(f"Connection attempt {attempt + 1} failed: {error}")
-            # Store the last exception to raise later if needed
-            last_exception = error
-            # Wait for a specified delay before retrying
-            time.sleep(delay)
-    # If all retries fail, raise the last exception
-    raise last_exception
 
-# Define the RabbitMQ server host and queue name
-rabbitmq_server = 'rabbitmq'
-queue_identifier = 'url_queue'
-# Establish connection to RabbitMQ using the function above
-rabbitmq_connection = establish_connection()
-# Create a channel on the connection
-communication_channel = rabbitmq_connection.channel()
-# Declare a queue on the channel, which will be durable (survives broker restart)
-communication_channel.queue_declare(queue=queue_identifier, durable=True)
+print('')
+print('▒█▀▄▒█▀▄  lab. PR | FAF | FCIM | UTM | Fall 2023')
+print('░█▀▒░█▀▄  FAF-212 Cristian Brinza lab7  ')
+print('')
 
-# Recursive function to crawl URLs and send them to the RabbitMQ queue
-def crawl_urls(max_depth, current_depth, urls_to_visit, collected_urls, channel, queue):
-    # Base case: stop if the current depth exceeds the max depth or the list of URLs
-    if current_depth >= len(urls_to_visit) or current_depth >= max_depth:
-        print(f"Total URLs collected: {len(collected_urls)}")
+
+# Import necessary libraries
+import requests  # Used for making HTTP requests to web pages
+from bs4 import BeautifulSoup  # Used for parsing HTML content
+import pika  # RabbitMQ library for Python
+from termcolor import colored  # Library to add color to console output
+
+
+# Function to display a simple start-up banner
+def display_banner():
+    """Displays a simple banner at the start of the script."""
+    # Print a colored message to the console
+    print(colored("Starting URL Scraper and Queue Sender", "green"))
+
+
+# Function to set up a RabbitMQ connection and declare a queue
+def setup_rabbitmq():
+    """Set up RabbitMQ connection and channel."""
+    # Connect to RabbitMQ server running on localhost
+    connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    # Create a channel on this connection
+    channel = connection.channel()
+    # Declare a queue named 'url_queue' on this channel
+    channel.queue_declare(queue='url_queue')
+    # Print a status message
+    print(colored("RabbitMQ Setup Complete", "blue"))
+    # Return the created connection and channel
+    return connection, channel
+
+
+# Function to send a URL to the RabbitMQ queue
+def send_url_to_queue(channel, url):
+    """Send a URL to the RabbitMQ queue."""
+    # Publish a message (URL) to the 'url_queue'
+    channel.basic_publish(exchange='', routing_key='url_queue', body=url)
+    # Print a status message for each URL sent
+    print(colored(f"URL Sent to Queue: {url}", "yellow"))
+
+
+# Function to parse a URL and enqueue new links found
+def parse_and_enqueue_links(url, channel):
+    """Parse given URL and enqueue new links found."""
+    # Make an HTTP GET request to the URL
+    response = requests.get(url)
+    # Parse the content of the request using BeautifulSoup
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Loop through all 'a' tags with 'href' attribute and 'js-item-ad' class
+    for link in soup.find_all('a', href=True, class_='js-item-ad'):
+        href = link.get('href')
+        # Check if href is valid and doesn't start with 'b'
+        if href and href[1] != 'b':
+            # Construct the full URL
+            full_url = f"https://999.md{href}"
+            # Send the URL to the RabbitMQ queue
+            send_url_to_queue(channel, full_url)
+
+    # Return a list of new URLs from the page's pagination section
+    return [f"https://999.md{a.get('href')}" for a in soup.select('nav.paginator > ul > li > a') if a.get('href')]
+
+
+# Recursive function for crawling URLs
+def recursive_crawl(max_iterations, current_iteration, urls, channel):
+    """Recursively crawl URLs up to a maximum number of iterations."""
+    # Check if the maximum iterations or URL list length is reached
+    if current_iteration >= max_iterations or current_iteration >= len(urls):
         return
 
-    # Get the current URL to process
-    current_url = urls_to_visit[current_depth]
+    # Print the current URL being processed
+    print(colored(f"Processing URL {current_iteration + 1}/{len(urls)}: {urls[current_iteration]}", "cyan"))
+    # Parse and enqueue links from the current URL
+    new_urls = parse_and_enqueue_links(urls[current_iteration], channel)
+    # Loop through the new URLs and add them to the list if not already present
+    for new_url in new_urls:
+        if new_url not in urls:
+            urls.append(new_url)
+
+    # Recursively call the function with the next URL
+    recursive_crawl(max_iterations, current_iteration + 1, urls, channel)
+
+
+# Main execution block
+if __name__ == "__main__":
+    # Display the start-up banner
+    display_banner()
+    # Initial list of URLs to crawl
+    initial_urls = ["https://999.md/ro/list/real-estate/house-and-garden?o_38_249=1644&applied=1&eo=12900&eo=12912&eo=12885&eo=13859&ef=40&ef=41&o_41_1=776"]
+    # Set up RabbitMQ connection and channel
+    connection, channel = setup_rabbitmq()
+
     try:
-        # Fetch the content of the URL using HTTP GET request
-        response = requests.get(current_url)
-        # Parse the HTML content of the page
-        html_parser = BeautifulSoup(response.content, "html.parser")
-
-        # Loop through all anchor tags with a specific class to find product URLs
-        for anchor in html_parser.find_all('a', href=True, class_='js-item-ad'):
-            # Construct the full URL by appending the href attribute to the base URL
-            complete_url = f"https://999.md{anchor.get('href')}"
-            # Add the URL to the set if it's not already present to avoid duplicates
-            if complete_url not in collected_urls:
-                collected_urls.add(complete_url)
-                # Publish the URL to the specified RabbitMQ queue
-                channel.basic_publish(exchange='', routing_key=queue, body=complete_url)
-                print(f"Dispatched URL to queue: {complete_url}")
-
-        # Look for additional pages to crawl by finding pagination links
-        for pagination_link in html_parser.select('nav.paginator > ul > li > a'):
-            # Construct the full URL for the new page
-            next_page_url = f"https://999.md{pagination_link.get('href')}"
-            # Add the new page URL to the list if it's not already there
-            if next_page_url not in urls_to_visit:
-                urls_to_visit.append(next_page_url)
-
-        # Recursively call the function to process the next URL
-        crawl_urls(max_depth, current_depth + 1, urls_to_visit, collected_urls, channel, queue)
-
-    except requests.RequestException as e:
-        # Print an error message if the URL fetch fails
-        print(f"Error fetching URL {current_url}: {str(e)}")
-
-# Set of URLs that have been collected
-discovered_urls = set()
-# The initial URL from which the crawling will start
-initial_url = "https://999.md/                                        "
-# Start the recursive crawling process with an arbitrarily large max depth
-crawl_urls(100000000, 0, [initial_url], discovered_urls, communication_channel, queue_identifier)
-
-# Close the RabbitMQ connection after the crawling process is complete
-rabbitmq_connection.close()
+        # Start the recursive crawling process
+        recursive_crawl(1000000, 0, initial_urls, channel)
+    finally:
+        # Close the RabbitMQ connection when done
+        connection.close()
+        # Print a message indicating the closure of the connection
+        print(colored("RabbitMQ Connection Closed", "red"))
