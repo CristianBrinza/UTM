@@ -1,10 +1,10 @@
-<h2 align="center">FAF-211</h2>
+<h2 align="center">FAF-21x</h2>
 
 -  Grama Alex - [link](https://github.com/AlexGrama22)
 - Andries Alexandru - [link](https://github.com/prenaissance)
-
-<h2 align="center">FAF-212</h2>
-
+- Țărnă Cristina - [link](https://github.com/CristinaT21)
+- Corneliu - [link](https://github.com/muffindud)
+- Sclifos Tudor [link](https://github.com/SexomQ)
  - Botezatu Marius - [link](https://github.com/MariusBotezatuu)
  - Brinza Cristian  - [link](https://github.com/cristianbrinza)
  - Buzu Alexandru  - [link](https://github.com/BuzuAlexandru)
@@ -16,6 +16,15 @@
 -  Moraru Dumitru - [link](https://github.com/adrenalin-42)
 -  Maxim Cernetchi - [link](https://github.com/malmilo6)
 -  Procopii Maria - [link](https://github.com/MariaProcopii)
--  Cara Alexandr- [link]()
+-  Cara Alexandr- [link](https://github.com/CaraAlexandr)
 - Vlad Ursu [link](https://github.com/Vlad-Urs)
-
+- Inga Paladi - [link](https://github.com/inga-paladi)
+- Frunze Vladislav [link](https://github.com/Frunnze)
+- Iuliana - [link](https://github.com/Iuliana0109)
+- Felicia Lupascu - [link](https://github.com/feliciaL3)
+- Vladimir - [link](https://github.com/ValkaProgramer)
+- Ana Bzovii [link](https://github.com/anabzovii)
+- Corețchi Mihai - [link](https://github.com/eamtcPROG)
+- Leonid Caminschi - [link](https://github.com/LeonidCaminschi)
+- Prodan Denis - [link](https://github.com/denis-svg)
+- Anastasia Cunev [link](https://github.com/NastiaCu)
