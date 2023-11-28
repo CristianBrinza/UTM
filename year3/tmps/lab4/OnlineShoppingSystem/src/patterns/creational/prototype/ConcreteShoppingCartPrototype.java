@@ -3,8 +3,7 @@ package patterns.creational.prototype;
 import java.util.List;
 import java.util.ArrayList;
 
-import domain.products.*;
-import domain.products.Product;
+import domain.Product;
 
 // Concrete Prototype: Implements the Prototype interface for cloning shopping cart.
 public class ConcreteShoppingCartPrototype implements ShoppingCartPrototype {

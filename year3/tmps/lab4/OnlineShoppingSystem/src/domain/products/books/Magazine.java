@@ -1,7 +1,7 @@
 package domain.products.books;
 
 
-import domain.products.Product;
+import domain.Product;
 
 public class Magazine implements Product {
     private String name;
@@ -13,6 +13,16 @@ public class Magazine implements Product {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
     }
 
     @Override

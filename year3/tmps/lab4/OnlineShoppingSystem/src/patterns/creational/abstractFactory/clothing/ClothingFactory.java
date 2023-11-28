@@ -1,6 +1,6 @@
 package patterns.creational.abstractFactory.clothing;
 
-import domain.products.Product;
+import domain.Product;
 import domain.products.clothing.Jeans;
 import domain.products.clothing.TShirt;
 import patterns.creational.abstractFactory.AbstractProductFactory;

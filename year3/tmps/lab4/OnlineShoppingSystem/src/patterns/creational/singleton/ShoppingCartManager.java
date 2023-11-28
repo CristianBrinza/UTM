@@ -1,6 +1,6 @@
 package patterns.creational.singleton;
 
-import domain.products.Product;
+import domain.Product;
 
 import java.util.ArrayList;
 import java.util.List;

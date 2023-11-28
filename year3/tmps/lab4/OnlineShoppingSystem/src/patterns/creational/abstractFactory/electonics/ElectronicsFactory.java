@@ -1,6 +1,6 @@
 package patterns.creational.abstractFactory.electonics;
 
-import domain.products.Product;
+import domain.Product;
 import domain.products.electronics.Electronics;
 import domain.products.electronics.Gadget;
 import patterns.creational.abstractFactory.AbstractProductFactory;
