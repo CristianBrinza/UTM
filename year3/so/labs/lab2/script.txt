@@ -1,5 +1,5 @@
 rm floppy.img
 rm boot.bin
 dd if=/dev/zero of=floppy.img bs=512 count=2880
-nasm -f bin -o boot.bin b.asm
+nasm -f bin -o boot.bin echo3.asm
 dd if=boot.bin of=floppy2.img conv=notrunc

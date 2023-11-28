@@ -1,0 +1,28 @@
+package domain.products.books;
+
+
+import domain.products.Product;
+
+public class Magazine implements Product {
+    private String name;
+
+    public Magazine(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void describeProduct() {
+        System.out.println("This is a magazine named " + name + ".");
+    }
+
+    @Override
+    public Product cloneProduct() {
+        return null;
+    }
+}
+
