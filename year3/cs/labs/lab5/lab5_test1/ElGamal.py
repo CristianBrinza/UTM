@@ -1,0 +1,32 @@
+p = 32317006071311007300153513477825163362488057133489075174588434139269806834136210002792056362640164685458556357935330816928829023080573472625273554742461245741026202527916572972862706300325263428213145766931414223654220941111348629991657478268034230553086349050635557712219187890332729569696129743856241741236237225197346402691855797767976823014625397933058015226858730761197532436467475855460715043896844940366130497697812854295958659597567051283852132784468522925504568272879113720098931873959143374175837826000278034973198552060607533234122603254684088120031105907484281003994966956119696956248629032338072839127039
+print(f"Given p value p = {p}")
+
+g = 2
+print(f"Given g value g = {g}")
+
+d = 1234
+print(f"Random secret key d for Alice d = {d}")
+
+e = pow(g, d, p)
+print(f"Alice's public key e = {e}")
+
+alice_public_key = (p, g, e)
+alice_private_key = (p, d)
+print(f"Alice's public keys = ({alice_public_key})")
+
+message = "Procopii Maria"
+print(f"Convert the message = {message}")
+
+m = [ord(char) for char in message]
+print(f"Message numeric representation = {m}")
+
+k = 4321
+print(f"Random secret key k for Bob k = {k}")
+
+B1 = pow(g, k, p)
+B2 = [(char * pow(e, k, p)) % p for char in m]
+print(f"B1 = {B1}")
+print(f"B2 = {B2}")
+
+decrypted_message = [(char * pow(pow(B1, d, p), -1, p)) % p for char in B2]
+print("Decrypted message:", ''.join([chr(char) for char in decrypted_message]))
