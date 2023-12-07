@@ -14,7 +14,7 @@ alice_public_key = (p, g, e)
 alice_private_key = (p, d)
 print(f"Alice's public keys = ({alice_public_key})")
 
-message = "Procopii Maria"
+message = "Cristian Brinza"
 print(f"Convert the message = {message}")
 
 m = [ord(char) for char in message]

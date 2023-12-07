@@ -1,0 +1,30 @@
+section .data
+    ; The string to be written for block number 35
+    to_write_str35   db "@@@FAF-212 Cara Alexandr###"
+    to_write_len35   equ $ - to_write_str35
+
+    ; The starting and ending sector for block number 35
+    start_track35    equ 35  ; Start block number * 30 - (30 - 1)
+    start_sector35   equ 21  ; (1020 / 30) + 1
+    end_track35      equ 35  ; End block number * 30 / 30
+    end_sector35     equ 30  ; 1050 / 30
+
+    ; The string to be written for block number 33
+    to_write_str33   db "@@@FAF-212 Cristian Brinza###"
+    to_write_len33   equ $ - to_write_str33
+
+    ; The starting and ending sector for block number 33
+    start_track33    equ 33  ; Start block number * 30 - (30 - 1)
+    start_sector33   equ 1   ; (960 / 30) + 1
+    end_track33      equ 33  ; End block number * 30 / 30
+    end_sector33     equ 30  ; 990 / 30
+
+    ; The string to be written for block number 57
+    to_write_str57   db "@@@FAF-212 Bogdan Zlatovcen###"
+    to_write_len57   equ $ - to_write_str57
+
+    ; The starting and ending sector for block number 57
+    start_track57    equ 57  ; Start block number * 30 - (30 - 1)
+    start_sector57   equ 11  ; (1680 / 30) + 1
+    end_track57      equ 57  ; End block number * 30 / 30
+    end_sector57     equ 30  ; 1710 / 30

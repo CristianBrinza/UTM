@@ -23,7 +23,7 @@ while phi_n % e == 0:
 d = inverse(e, phi_n)
 print(f"private exponent d = {d}")
 
-message = "Procopii Maria"
+message = "Cristian Brinza"
 print(f"Original Message: {message}")
 m = int.from_bytes(message.encode(), byteorder='big')
 print(f"Converted m to ASCII = {m}")
