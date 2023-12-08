@@ -1,3 +1,14 @@
+#do not use
+#modify !!!!!!!!!!!!!!!!!!!!!!
+
+
+#1,2,9,16 !!!!!
+
+#S box,... (toate tabelele)
+#5 pasi de generare a chilor pentru RSA (e,d,n) 4 tupluri cate 3 ( cate valide,etc....)
+
+
+
 import random
 
 # Define the key rotation schedule for each round
@@ -54,5 +65,5 @@ def main():
         print(D)
 
 
-if name == "main":
+if __name__ == "__main__":
     main()
