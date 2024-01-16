@@ -33,8 +33,8 @@ def send_email(destination_email, subject, email_text, file_link):
     The sender's email and password should not be hardcoded. Ideally, they should be
     securely stored and retrieved from environment variables or a secure store.
     """
-    sender_email = "somelogin@gmail.com"  # The sender's email address (should be replaced with a real address).
-    sender_password = "somepassword"  # The sender's email password (should be replaced with a real password).
+    sender_email = "cristian.brinza.service.acc@gmail.com"  # The sender's email address (should be replaced with a real address).
+    sender_password = "dzet yvpf pesr dcsz"  # The sender's email password (should be replaced with a real password).
 
     message = MIMEMultipart()  # Creating a MIMEMultipart object for the email message.
     message['From'] = sender_email  # Setting the sender's email in the message header.
