@@ -1,0 +1,41 @@
+// Define constants for LED and button pin numbers for easier reference and modification.
+#define LED_PIN 8
+#define BUTTON_PIN 7
+
+// Variables to store the last state of the button and the current state of the LED.
+byte lastButtonState = LOW; // Stores the previous state of the button (LOW = not pressed, HIGH = pressed)
+byte ledState = LOW; // Stores the current state of the LED (LOW = off, HIGH = on)
+
+// Debounce configuration to prevent reading false positives due to the button's mechanical properties.
+unsigned long debounceDuration = 50; // Duration in milliseconds to wait for button debounce
+unsigned long lastTimeButtonStateChanged = 0; // Timestamp of the last button state change
+
+// The setup function runs once when the sketch starts. It's used to configure pin modes.
+void setup() {
+  pinMode(LED_PIN, OUTPUT); // Sets the LED pin as an output to control the LED
+  pinMode(BUTTON_PIN, INPUT); // Sets the button pin as an input to read button presses
+}
+
+// The loop function runs continuously after setup() finishes. It contains the main logic.
+void loop() {
+  // Check if the time since the last button state change is greater than the debounce duration.
+  if (millis() - lastTimeButtonStateChanged > debounceDuration) {
+    // Read the current state of the button.
+    byte buttonState = digitalRead(BUTTON_PIN);
+    
+    // Check if the button state has changed since the last loop iteration.
+    if (buttonState != lastButtonState) {
+      // Update the timestamp and button state because a change was detected.
+      lastTimeButtonStateChanged = millis(); // Save the current time as the last change time
+      lastButtonState = buttonState; // Update the last button state to the current state
+      
+      // If the button is released (state is LOW), toggle the LED state.
+      if (buttonState == LOW) {
+        // Change the LED state from on to off, or off to on.
+        ledState = (ledState == HIGH) ? LOW : HIGH; // Ternary operator to toggle the state
+        // Apply the new LED state to the LED pin, turning it on or off.
+        digitalWrite(LED_PIN, ledState);
+      }
+    }
+  }
+}

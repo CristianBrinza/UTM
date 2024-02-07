@@ -78,6 +78,12 @@
 |SO||[Labs](year3/so/labs/)
 |TMPS||[Labs](year3/tmps/)
 
+## Semeter II
+
+| Discipline  | Theory | Laboratories | Templates|
+| ------------- | -------------                      |-------------|-------------|
+|PSI||[Labs](year3/si/labs)
+
 
 
 </br></br>
