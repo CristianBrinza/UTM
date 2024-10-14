@@ -86,6 +86,21 @@
 
 
 
-</br></br>
+
+<br><br>
+
+## Usefu termial commands
+
+get last commit on github date (2024-09-09 21:45:04):
+```
+git log -1 --format=%cd --date=format:"%Y-%m-%d %H:%M:%S"
+```
+
+
+commit on git for where you can set the commit date:
+```
+GIT_COMMITTER_DATE="2024-09-10 15:30:45" git commit --date="2024-09-10 15:30:45" -m "Your commit message"
+```
+</br>
 <h1 align='center'><i>Stay awesome!</i></h1>
 
