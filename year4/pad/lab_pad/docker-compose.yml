@@ -1,0 +1,21 @@
+version: '3'
+services:
+  event_service:
+    build: ./event_service
+    ports:
+      - "50051:50051"
+  
+  user_service:
+    build: ./user_service
+    ports:
+      - "50052:50052"
+
+  service_discovery:
+    build: ./service_discovery
+    ports:
+      - "8000:8000"
+  
+  gateway:
+    build: ./gateway
+    ports:
+      - "5000:5000"

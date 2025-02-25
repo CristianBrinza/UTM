@@ -1,0 +1,11 @@
+{
+  "name": "user_service",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "grpc": "^1.24.2",
+    "@grpc/proto-loader": "^0.5.5",
+    "sqlite3": "^5.0.0",
+    "lru-cache": "^6.0.0"
+  }
+}

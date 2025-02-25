@@ -1,0 +1,365 @@
+What is not a prioritization method from this list? 
+A) MoSCoW
+B) WSJF
+C) RAPIDS
+D) RICE
+ANSWER: C
+What is not an estimation method?
+A) WSJN
+B) PERT 
+C) Planning Poker 
+D) Bottom-up estimate 
+ANSWER: A
+Why points-based estimates are better than time estimates?
+A) People estimate better when they think in abstract terms 
+B) People estimate better when they compare relative sizes 
+C) People can be overly optimistic about time estimates, not so much points 
+D) Point based estimates are scientifically proven to be better 
+ANSWER: B
+How is RICE prioritization different from Value-Effort method?
+A) RICE is more nuanced 
+B) RICE takes into account the confidence about the possible value of a task 
+C) Value-Effort method is based on Fibonacci numbers while RICE has 1-5 points 
+D) The difference is just the name and some details on how to compute the value, RICE being more formal 
+ANSWER: B
+A work-breakdown structure is used to organize:
+A) System components 
+B) Tangible assets 
+C) The work of a company/team 
+D) 
+ANSWER: C
+ Expenses and profits based on: 
+A) Phases of the development and delivery process 
+B) Deliverables or results 
+C) Teams and responsibilities 
+D) All of the above 
+ANSWER: D
+Which of the below is not a WBS design principle?
+A) The elements of the WBS should be numbered sequentially and in a hierarchical structure (e.g. 1, 1.1, 1.1.1, 1.1.2 etc) 
+B) The children of a node should collectively represent 100% of the scope of the parent 
+C) The levels of the WBS should be layered horizontally (i.e., layers are horizontally stacked on top of each other) 
+D) The children of a node of a node should have mutually exclusive scopes 
+ANSWER: C
+What relation can be between actors?
+A) association    
+B) generalization
+C) include 
+D) extension
+ANSWER: B
+What means IDEF1?
+A) modelling of informational streams
+B) data modelling 
+C) ontology description 
+D) object-oriented design 
+ANSWER: A
+, asynchronous <<&>>
+A) All previous processes must be finished
+B) All previous processes must finish at the same time 
+C) One or all previous processes must be finished 
+ANSWER: A
+Define what is an OKR?
+A) A metric that needs to be optimized
+B) A semi-formal definition of what needs to be achieved
+C) A set of objectives that together define a goal
+D) An unrealistic vision that needs to be partially achieved
+ANSWER: C
+What is the difference between an OKR and a KPI? 
+A) OKRs are metrics and KPIs are not
+B) OKRs are more high level and KPIs are closer to individual processes
+C) The letters, O, R, P, I, are different
+D) OKRs are more long term and KPIs are not
+ANSWER: B
+Is it required that an OKR be completed/achieved totally? 
+A) No
+B) Yes
+C) It depends
+ANSWER: A
+What is not typical for Waterfall methodology?
+A) Short development cycles
+B) Detailed planning and system modeling done ahead of time 
+C) Estimation in terms of man-hours 
+D) Well defined separation between analysis, development and testing 
+ANSWER: A
+How is Kanban different from Scrum? 
+A) Kanban focuses on continuous development and delivery, while Scrum works in iterations
+B) Kanban is an iterative approach while Scrum is not
+C) Kanban’s origin is in manufacturing and Scrum’s is in consulting services
+D) Scrum can change priorities mid-iteration while Kanban doesn’t
+ANSWER: A
+Which of the following is not a statement from the Agile manifesto?
+A) Individuals and interactions over processes and tools 
+B) Continuous delivery over occasional releases 
+C) Customer collaboration over contract negotiation 
+D) Responding to change over following a plan 
+ANSWER: B
+A team has a meeting during which they assign tasks once in two weeks, they also analyze what went wrong during since the previous meeting, what project management methodology are they using? 
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+D) Iterative Waterfall 
+ANSWER: A
+A team continuously develops and deploys a project, only making sure they work on a limited number of tasks at a time, what project management methodology are they using? 
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+D) Iterative Waterfall 
+ANSWER: B
+A team has committed to deliver the first version of a software product in 6 months, with all the features they defined 2 months ago, what project management methodology are they using? 
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+D) Iterative Waterfall 
+ANSWER: C
+ A team has decided to do daily pair-programming sessions and is very rigorous about continuous integration and doing test-driven development, what project management methodology are they using? 
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+D) Extreme Programming 
+ANSWER: D
+What project management methodology is best suited for the use case of developing software for an ecommerce site as an outsource project? 
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+ANSWER: A
+What project management methodology is best suited for the use case of developing software for a SaaS startup?
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+ANSWER: B
+What project management methodology is best suited for the use case of developing software for a space shuttle? 
+A) Scrum 
+B) Kanban 
+C) Waterfall 
+ANSWER: C
+Given the KPI: “The X system must have an MTTR of no more than 3 hours”, what’s missing? 
+A) Time bound/deadline for the KPI
+B) KPI is not specific
+C) KPI is not attainable
+D) KPI is not measurable 
+ANSWER: A
+Given the KPI: “Increase the customer lifetime value for the Y service until the end of 2021”, what’s missing? 
+A) Time bound/deadline for the KPI
+B) KPI is not specific 
+C) KPI is not attainable
+D) KPI is not measurable
+ANSWER: D
+Given the OKR: “Achieve a 20% market share for product X in the EMEA region by the end of 2021”, what’s wrong with it? 
+A) Time bound/deadline for the OKR is missing
+B) OKR is too ambitious
+C) OKR lacks key results
+D) Key results are not measurable
+ANSWER: C
+Given the OKR: “Make the company the leader on X market, through production cost reduction by 50%, increasing the sales team by 2x and increasing the conversion ratio to 8% from current 3%”, what’s wrong with it? 
+A) Time bound/deadline for the OKR is missing 
+B) OKR is too ambitious 
+C) OKR lacks key results
+D) Key results are not measurable 
+ANSWER: A
+How many levels software requirements have:
+A) 5
+B) 7
+C) 11
+D) 3
+ANSWER: D
+Which of the following shows the RESPONSABILITY ASIGNMENT:
+A) CATWOE
+B) USE-CASE
+C) ACTIVITY DIAGRAM
+D) RASCI DIAGRAM
+ANSWER: D
+Software requirement is:
+A) the same as project requirement
+B) different from project requirement
+C) testing information
+D) project planning information
+ANSWER: B
+Select quality attributes for CORPORATE APPLICATIONS system type.
+A) Availability, performance, scalability, security, usability, integrity, interoperability
+B) Usability, performance, security
+C) Usability, reliability, security, availability, scalability, maintainability
+D) Performance, efficiency, reliability, robustness, safety, security, usability
+ANSWER: A
+Select quality attributes for DESKTOP AND MOBILE APPLICATIONS system type.
+A) Availability, performance, scalability, security, usability, integrity, interoperability
+B) Usability, performance, security
+C) Usability, reliability, security, availability, scalability, maintainability
+D) Performance, efficiency, reliability, robustness, safety, security, usability
+ANSWER: B
+Select quality attributes for WEB/INTERNET APPLICATIONS system type.
+A) Availability, performance, scalability, security, usability, integrity, interoperability
+B) Usability, performance, security
+C) Usability, reliability, security, availability, scalability, maintainability
+D) Performance, efficiency, reliability, robustness, safety, security, usability
+ANSWER: C
+Select quality attributes for EMBEDDED SYSTEMS type.
+A) Availability, performance, scalability, security, usability, integrity, interoperability
+B) Usability, performance, security
+C) Usability, reliability, security, availability, scalability, maintainability
+D) Performance, efficiency, reliability, robustness, safety, security, usability
+ANSWER: D
+Product requirements focus on
+A) WHAT is to be built
+B) HOW the team will build the product
+C) HOW details are designed or implemented
+D) WHEN software requirement is the same as project requirement
+ANSWER: A
+Select the right order of activities in requirement specification process.
+A) Analysis-Elicitation-Validation&Verification-Specification
+B) Analysis-Specification-Validation&Verification-Elicitation
+C) Elicitation-Analysis-Specification-Validation&Verification
+D) Elicitation-Specification-Analysis-Validation&Verification
+ANSWER: C
+ELICITATION is focused on:
+A) Understanding the problem domain and the problem, requirements modeling, creating prototypes
+B) Requirements reviews, inspection and testing.
+C) Managing and controlling changes to requirements
+D) Discovery (define scope and vision, identify users)
+ANSWER: D
+ANALYSIS is focused on:
+A) Understanding the problem domain and the problem, requirements modeling, creating prototypes
+B) Requirements reviews, inspection and testing.
+C) Managing and controlling changes to requirements
+D) Discovery (define scope and vision, identify users)
+ANSWER: A
+VALIDATION&VERIFICATION is focused on:
+A) Understanding the problem domain and the problem, requirements modeling, creating prototypes
+B) Requirements reviews, inspection and testing.
+C) Managing and controlling changes to requirements
+D) Discovery (define scope and vision, identify users)
+ANSWER: B
+REQUIREMENTS MANAGEMENT is focused on:
+A) Understanding the problem domain and the problem, requirements modeling, creating prototypes
+B) Requirements reviews, inspection and testing.
+C) Managing and controlling changes to requirements
+D) Discovery (define scope and vision, identify users)
+ANSWER: C
+Constraint is:
+A) A restriction that is imposed on the choices available to the developer for the design and construction of a product.
+B) A description of a connection between a software system and a user, another software system, or a hardware device
+C) A description of a property or characteristic that a system must exhibit or a constraint that it must respect.
+D) A goal or task that specific classes of users must be able to perform with a system, or a desired product attribute.
+ANSWER: A
+How many phases are in the SDLC?
+A) 6
+B) 10
+C) 5
+D) 3
+E) 15
+ANSWER: A
+Select one disadvantage of waterfall model:
+A) This model is simple and easy to understand and use
+B) In this model phases are processed and completed one at a time. Phases do not overlap
+C) High amounts of risk and uncertainty.
+D) Waterfall model works well for smaller projects where requirements are clearly defined and very well understood
+ANSWER: C
+This diagram stands for:
+A) Waterfall model
+B) Spiral model
+C) V-model
+D) RAD model
+E) Iterative model
+ANSWER: A
+What are three levels of Functional Requirements?
+A) Business Requirements, User Requirements, Functional Requirements
+B) Non-Functional Requirements, Transition Requirements, Market Requirements
+C) Non-Functional Requirements, Functional Requirements, Market Requirements
+D) Business Requirements, User Requirements, Transition Requirements
+ANSWER: A
+Which model is described by the below diagram?
+A) Spiral model
+B) V-model
+C) Waterfall model
+D) Double V model
+E) All directions model
+ANSWER: B
+Choose the model for the below diagram:
+A) Agile model
+B) Spiral model
+C) V-model
+D) Waterfall model
+ANSWER: A
+Diagram stands for:
+A) Iterative model
+B) Spiral model
+C) V-model
+D) RAD model
+ANSWER: A
+PRODUCT OWNER is responsible for:
+A) Increasing the value of the product and manage product backlog
+B) Monitoring if the team is present at the meetings
+C) Identifying test cases
+D) Modelling application through UML diagrams
+ANSWER: A
+USER STORY IS:
+A) a way to structure requirements.
+B) test case in more descriptive view.
+C) a reason to solve a bug.
+D) a project benefit.
+ANSWER: A
+Which of the following statements is true about visibility?
+A) UML uses # for public element
+B) UML uses - for private element
+C) UML uses * for protected element
+D) UML adopts Java convention
+E) All of the above
+ANSWER: B
+When to use Interaction Diagrams?
+A) When you want to look at the behavior of several objects in a Use Case or several Use Cases
+B) They are good at showing collaborations among objects;they are not so good at conditions and wrapping
+C) They are good at looking at the behavior of a single object across many use cases
+D) All of the above
+E) None of the above
+ANSWER: B
+Which of the following statements are true?
+A) State diagrams are good at describing the behavior of an object across multiple Use Cases.
+B) To describe behavior that involves multiple objects in a use case, use the interaction diagram
+C) To describe behavior that involves multiple objects in multiple Use Cases, use the activity diagram
+D) UI and control objects are ideal candidates to be represented by a state diagram.
+E) All of the above
+F) None of the above
+ANSWER: E
+Which statement is false about stereotype?
+A) A stereotype in UML is a mechanism to categorize an element in a certain way.
+B) The advantage of Stereotypes is to minimize the change of UML meta-model when your construct cannot be represented with existing constructs.
+C) A stereotype encloses text in quotes (<< text >>) e.g. << interface >> is used to indicate an interface.
+D) All of the above
+E) None of the above
+ANSWER: E
+Which statement is false?
+A) The behavior of objects of a class can be described formally in terms of states and events, using a statechart associated with the class under consideration.
+B) A ​​statechart can be associated with each class in the model
+C) All of the above
+D) None of the above
+ANSWER: D
+	* When do we use composition?
+A) When is the question - has a?
+B) When is the question - is a?
+C) When the created object will exist after the destruction to the linked object
+D) When the created object will not exist after the destruction to the linked object
+ANSWER: A
+When aggregation is used?
+A) When aggregation is used?
+B) When is the question - is a?
+C) When the created object will exist after the destruction to the linked object
+D) When the created object will not exist after the destruction to the linked object
+ANSWER: B
+Difference between composition and aggregation?
+A) Life cycle is different
+B) Life cycle is the same
+C) They have no life cycle
+D) They have an encapsulated life cycle
+E) None of the above
+ANSWER: A
+What relationships between packages are admissible, according to the specifications of the UML language
+A) generalization
+B) admission
+C) dependency
+D) variation
+E) composition
+ANSWER: C
+Constraints can be represented in UML by:
+A) [ text string ]
+B) { text string }
+C) notes
+D) constraint
+ANSWER: B

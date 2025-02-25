@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package user;
+
+service UserService {
+  rpc SendNotification (NotificationRequest) returns (NotificationResponse);
+  rpc Status (StatusRequest) returns (StatusResponse);
+}
+
+message NotificationRequest {
+  string user_id = 1;
+  string message = 2;
+}
+
+message NotificationResponse {
+  bool success = 1;
+}
+
+message StatusRequest {}
+
+message StatusResponse {
+  string status = 1;
+}

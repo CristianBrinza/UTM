@@ -66,7 +66,7 @@
 |LFAF |[Theory](year2/lfaf/)|[Labs](year2/lfaf/labs/)|| 
 |LE|||[course](https://else.fcim.utm.md/course/view.php?id=197)|
 </br></br>
-<h1 align="center" >Anul III (2022-2023)</h1>
+<h1 align="center" >Anul III (2023-2024)</h1>
 
 
 ## Semeter I
@@ -84,8 +84,14 @@
 | ------------- | -------------                      |-------------|-------------|
 |PSI||[Labs](year3/si/labs)
 
+</br></br>
+<h1 align="center" >Anul IV (2024-2025)</h1>
 
-
+| Discipline | Theory | Laboratories | Exam                   |
+|------------| -------------                      |-------------|------------------------|
+| FIA        ||[Labs](year4/fia/)| [Exam](year4/fia/exam) |
+| PAD        ||[Labs](https://github.com/CristianBrinza/event-planning)| [Exam](year4/pad/)     |
+| PSI        ||| [Exam](year4/psi/) |
 
 <br><br>
 
