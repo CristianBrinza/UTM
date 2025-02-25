@@ -89,7 +89,7 @@
 
 <br><br>
 
-## Usefu termial commands
+## Useful termial commands
 
 get last commit on github date (2024-09-09 21:45:04):
 ```
